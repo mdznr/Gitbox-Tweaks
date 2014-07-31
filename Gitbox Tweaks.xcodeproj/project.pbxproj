@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gitbox Tweaks.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A174E46153FC499009EC239 /* Gitbox Tweaks SIMBL Plugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gitbox Tweaks SIMBL Plugin.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A174E49153FC499009EC239 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3A174E4C153FC499009EC239 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3A174E4D153FC499009EC239 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -272,7 +272,7 @@
 		3A174E47153FC499009EC239 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */,
+				3A174E46153FC499009EC239 /* Gitbox Tweaks SIMBL Plugin.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -550,7 +550,7 @@
 			);
 			name = "SIMBL Plugin";
 			productName = "Hide Notification Center";
-			productReference = 3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */;
+			productReference = 3A174E46153FC499009EC239 /* Gitbox Tweaks SIMBL Plugin.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -691,7 +691,7 @@
 				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Prefix.pch";
 				INFOPLIST_FILE = "$(TARGET_NAME)/$(TARGET_NAME)-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins/";
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME) $(TARGET_NAME)";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -705,7 +705,7 @@
 				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Prefix.pch";
 				INFOPLIST_FILE = "$(TARGET_NAME)/$(TARGET_NAME)-Info.plist";
 				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins/";
-				PRODUCT_NAME = "$(PROJECT_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME) $(TARGET_NAME)";
 				VALID_ARCHS = x86_64;
 				WRAPPER_EXTENSION = bundle;
 			};
