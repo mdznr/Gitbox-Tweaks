@@ -9,7 +9,7 @@
 #import "GBSidebarItemObject-Protocol.h"
 
 @class GBRepositoriesController, GBSidebarItem, NSArray;
-@protocol GBSidebarItemObject><GBMainWindowItem;
+@protocol GBSidebarItemObject, GBMainWindowItem;
 
 __attribute__((visibility("hidden")))
 @interface GBRootController : NSResponder <GBSidebarItemObject>
@@ -18,12 +18,12 @@ __attribute__((visibility("hidden")))
     GBRepositoriesController *repositoriesController;
     NSArray *nextRespondingSidebarObjects;
     NSArray *_selectedObjects;
-    NSResponder<GBSidebarItemObject><GBMainWindowItem> *_selectedObject;
-    NSResponder<GBSidebarItemObject><GBMainWindowItem> *_clickedObject;
+    NSResponder<GBSidebarItemObject,GBMainWindowItem> *_selectedObject;
+    NSResponder<GBSidebarItemObject,GBMainWindowItem> *_clickedObject;
 }
 
-@property(retain, nonatomic) NSResponder<GBSidebarItemObject><GBMainWindowItem> *clickedObject; // @synthesize clickedObject=_clickedObject;
-@property(retain, nonatomic) NSResponder<GBSidebarItemObject><GBMainWindowItem> *selectedObject; // @synthesize selectedObject=_selectedObject;
+@property(retain, nonatomic) NSResponder<GBSidebarItemObject,GBMainWindowItem> *clickedObject; // @synthesize clickedObject=_clickedObject;
+@property(retain, nonatomic) NSResponder<GBSidebarItemObject,GBMainWindowItem> *selectedObject; // @synthesize selectedObject=_selectedObject;
 @property(retain, nonatomic) NSArray *selectedObjects; // @synthesize selectedObjects=_selectedObjects;
 @property(retain, nonatomic) NSArray *nextRespondingSidebarObjects; // @synthesize nextRespondingSidebarObjects;
 @property(retain, nonatomic) GBRepositoriesController *repositoriesController; // @synthesize repositoriesController;

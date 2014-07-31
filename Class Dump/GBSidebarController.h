@@ -6,10 +6,6 @@
 
 #import <AppKit/NSViewController.h>
 
-#import "NSMenuDelegate-Protocol.h"
-#import "NSOutlineViewDataSource-Protocol.h"
-#import "NSOutlineViewDelegate-Protocol.h"
-
 @class GBRootController, GBSidebarItem, NSButton, NSOutlineView, OAFastJumpController;
 
 __attribute__((visibility("hidden")))

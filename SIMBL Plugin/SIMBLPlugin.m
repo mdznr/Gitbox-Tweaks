@@ -12,6 +12,11 @@
 #import "GBStageViewController.h"
 #import "GBCommitCell.h"
 #import "GBStage.h"
+#import "GBSidebarItem.h"
+#import "GBAppDelegate.h"
+#import "GBRootController.h"
+#import "GBSidebarController.h"
+#import "GBMainWindowController.h"
 
 @implementation NSObject (SIMBLPlugin)
 
@@ -38,6 +43,12 @@
     [circle appendBezierPathWithOvalInRect:NSMakeRect(rect.origin.x - dimensions - margin, rect.origin.y + margin, dimensions, dimensions)];
     [[[SIMBLPlugin sharedPlugin] colorForSyncStatus:cell.commit.syncStatus] setFill];
     [circle fill];
+}
+
+- (NSImage *)SIMBL_image;
+{
+    NSImage *image = [self SIMBL_image];
+    return [[SIMBLPlugin sharedPlugin] replacementImages][image.name] ? : image;
 }
 
 @end
@@ -79,14 +90,35 @@
 {
     self = [super init];
     self.commitMessageFont = [NSFont fontWithName:@"Menlo" size:12];
+    self.replacementImages = @{
+        @"GBSidebarGroupIcon": [self imageNamed:@"GBSidebarGroupIcon"],
+        @"GBSidebarRepositoryIcon": [self imageNamed:@"GBSidebarRepositoryIcon"],
+        @"GBSidebarSubmoduleIcon": [self imageNamed:@"GBSidebarSubmoduleIcon"],
+        @"GBSidebarSubmoduleMissingIcon": [self imageNamed:@"GBSidebarSubmoduleMissingIcon"]
+    };
     return self;
 }
 
 + (void)load;
 {
+    SIMBLPlugin *plugin = [SIMBLPlugin sharedPlugin];
+    [plugin swizzleMethods];
+    [plugin refreshSidebar];
+}
+
+- (void)swizzleMethods;
+{
     SWIZZLE(@"GBCommitViewController", updateHeaderSize, SIMBL_updateHeaderSize);
     SWIZZLE(@"GBStageViewController", updateHeader, SIMBL_updateHeader);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, SIMBL_drawSyncStatusIconInRect:);
+    SWIZZLE(@"GBSidebarCell", image, SIMBL_image);
+}
+
+- (void)refreshSidebar;
+{
+    GBAppDelegate *delegate = (GBAppDelegate *)[NSApp delegate];
+    GBSidebarController *sidebar = delegate.windowController.sidebarController;
+    [sidebar updateContents];
 }
 
 @end

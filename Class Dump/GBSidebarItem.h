@@ -6,8 +6,6 @@
 
 #import <AppKit/NSResponder.h>
 
-#import "NSPasteboardWriting-Protocol.h"
-
 @class GBSidebarCell, GBSidebarController, NSImage, NSMenu, NSMutableDictionary, NSString;
 @protocol GBSidebarItemObject;
 
@@ -44,7 +42,7 @@ __attribute__((visibility("hidden")))
 @property(nonatomic, getter=isSpinning) BOOL spinning; // @synthesize spinning;
 @property(nonatomic, getter=isSection) BOOL section; // @synthesize section;
 @property(retain, nonatomic) NSMutableDictionary *viewsDictionary; // @synthesize viewsDictionary=_viewsDictionary;
-@property(retain, nonatomic) NSMenu *menu; // @synthesize menu;
+@property(retain) NSMenu *menu; // @synthesize menu;
 @property(retain, nonatomic) GBSidebarCell *cell; // @synthesize cell;
 @property(nonatomic) unsigned long long badgeInteger; // @synthesize badgeInteger;
 @property(copy, nonatomic) NSString *tooltip; // @synthesize tooltip;

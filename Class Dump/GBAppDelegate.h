@@ -6,9 +6,6 @@
 
 #import <Foundation/NSObject.h>
 
-#import "NSApplicationDelegate-Protocol.h"
-#import "NSOpenSavePanelDelegate-Protocol.h"
-
 @class GBMainWindowController, GBRootController, MASPreferencesWindowController, NSMenuItem, NSMutableArray, NSTextView;
 
 __attribute__((visibility("hidden")))

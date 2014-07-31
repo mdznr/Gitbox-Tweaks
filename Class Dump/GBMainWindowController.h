@@ -6,8 +6,6 @@
 
 #import <AppKit/NSWindowController.h>
 
-#import "NSSplitViewDelegate-Protocol.h"
-
 @class GBPlaceholderViewController, GBRootController, GBSidebarController, GBToolbarController, GBWelcomeController, NSSplitView, NSViewController, NSWindow, OABlockQueue, OAFastJumpController;
 @protocol GBMainWindowItem;
 
