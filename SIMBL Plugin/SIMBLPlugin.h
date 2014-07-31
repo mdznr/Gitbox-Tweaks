@@ -12,4 +12,11 @@
 
 + (SIMBLPlugin *)sharedPlugin;
 
+- (NSImage *)imageNamed:(NSString *)name;
+- (NSColor *)colorForSyncStatus:(int)syncStatus;
+
+@property (nonatomic) NSBundle *bundle;
+@property (nonatomic) NSFont *commitMessageFont;
+@property (nonatomic) NSDictionary *replacementImages;
+
 @end

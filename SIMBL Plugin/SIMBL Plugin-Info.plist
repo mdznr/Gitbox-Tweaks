@@ -22,15 +22,17 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>2</string>
+	<key>NSPrincipalClass</key>
+	<string>SIMBLPlugin</string>
 	<key>SIMBLTargetApplications</key>
 	<array>
 		<dict>
 			<key>BundleIdentifier</key>
-			<string>com.apple.notificationcenterui</string>
+			<string>com.oleganza.gitbox</string>
 			<key>MaxBundleVersion</key>
-			<string>206</string>
+			<string>1.6.2</string>
 			<key>MinBundleVersion</key>
-			<string>193</string>
+			<string>1.6.2</string>
 		</dict>
 	</array>
 </dict>

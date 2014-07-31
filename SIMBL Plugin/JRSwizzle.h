@@ -10,6 +10,11 @@
 withMethod:@selector(dest) \
 error:NULL]
 
+#define SWIZZLE_CLASS(class_name, src, dest) \
+[NSClassFromString(class_name) jr_swizzleClassMethod:@selector(src) \
+withClassMethod:@selector(dest) \
+error:NULL]
+
 @interface NSObject (JRSwizzle)
 
 + (BOOL)jr_swizzleMethod:(SEL)origSel_ withMethod:(SEL)altSel_ error:(NSError**)error_;

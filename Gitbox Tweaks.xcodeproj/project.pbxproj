@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A174E4A153FC499009EC239 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A174E49153FC499009EC239 /* Cocoa.framework */; };
+		3A4112B6197F76F200DB0D4B /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4112B1197F76F200DB0D4B /* JRSwizzle.m */; };
+		3A4112B8197F76F200DB0D4B /* SIMBLPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4112B5197F76F200DB0D4B /* SIMBLPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gitbox Tweaks.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A174E49153FC499009EC239 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3A174E4C153FC499009EC239 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3A174E4D153FC499009EC239 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3A174E4E153FC499009EC239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A4112B0197F76F200DB0D4B /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = "SIMBL Plugin/JRSwizzle.h"; sourceTree = SOURCE_ROOT; };
+		3A4112B1197F76F200DB0D4B /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = "SIMBL Plugin/JRSwizzle.m"; sourceTree = SOURCE_ROOT; };
+		3A4112B2197F76F200DB0D4B /* SIMBL Plugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SIMBL Plugin-Info.plist"; path = "SIMBL Plugin/SIMBL Plugin-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3A4112B3197F76F200DB0D4B /* SIMBL Plugin-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "SIMBL Plugin-Prefix.pch"; path = "SIMBL Plugin/SIMBL Plugin-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		3A4112B4197F76F200DB0D4B /* SIMBLPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SIMBLPlugin.h; path = "SIMBL Plugin/SIMBLPlugin.h"; sourceTree = SOURCE_ROOT; };
+		3A4112B5197F76F200DB0D4B /* SIMBLPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SIMBLPlugin.m; path = "SIMBL Plugin/SIMBLPlugin.m"; sourceTree = SOURCE_ROOT; };
+		3AF7ACB1197F7BD6005950A6 /* CDStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		3AF7ACB2197F7BD6005950A6 /* GBActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBActivity.h; sourceTree = "<group>"; };
+		3AF7ACB3197F7BD6005950A6 /* GBActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBActivityController.h; sourceTree = "<group>"; };
+		3AF7ACB4197F7BD6005950A6 /* GBAllStagedFilesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAllStagedFilesTask.h; sourceTree = "<group>"; };
+		3AF7ACB5197F7BD6005950A6 /* GBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAppDelegate.h; sourceTree = "<group>"; };
+		3AF7ACB6197F7BD6005950A6 /* GBApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBApplication.h; sourceTree = "<group>"; };
+		3AF7ACB7197F7BD6005950A6 /* GBAskPassBooleanPromptController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAskPassBooleanPromptController.h; sourceTree = "<group>"; };
+		3AF7ACB8197F7BD6005950A6 /* GBAskPassCredentialsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAskPassCredentialsController.h; sourceTree = "<group>"; };
+		3AF7ACB9197F7BD6005950A6 /* GBAskPassServer-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBAskPassServer-Protocol.h"; sourceTree = "<group>"; };
+		3AF7ACBA197F7BD6005950A6 /* GBAskPassServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAskPassServer.h; sourceTree = "<group>"; };
+		3AF7ACBB197F7BD6005950A6 /* GBAskPassServerClient-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBAskPassServerClient-Protocol.h"; sourceTree = "<group>"; };
+		3AF7ACBC197F7BD6005950A6 /* GBAsyncUpdater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAsyncUpdater.h; sourceTree = "<group>"; };
+		3AF7ACBD197F7BD6005950A6 /* GBAuthenticatedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBAuthenticatedTask.h; sourceTree = "<group>"; };
+		3AF7ACBE197F7BD6005950A6 /* GBBaseChangesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBBaseChangesController.h; sourceTree = "<group>"; };
+		3AF7ACBF197F7BD6005950A6 /* GBBasePromptController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBBasePromptController.h; sourceTree = "<group>"; };
+		3AF7ACC0197F7BD6005950A6 /* GBCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCell.h; sourceTree = "<group>"; };
+		3AF7ACC1197F7BD6005950A6 /* GBCellWithView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCellWithView.h; sourceTree = "<group>"; };
+		3AF7ACC2197F7BD6005950A6 /* GBCertificateUpdateController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCertificateUpdateController.h; sourceTree = "<group>"; };
+		3AF7ACC3197F7BD6005950A6 /* GBChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBChange.h; sourceTree = "<group>"; };
+		3AF7ACC4197F7BD6005950A6 /* GBChangeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBChangeCell.h; sourceTree = "<group>"; };
+		3AF7ACC5197F7BD6005950A6 /* GBChangeCheckboxCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBChangeCheckboxCell.h; sourceTree = "<group>"; };
+		3AF7ACC6197F7BD6005950A6 /* GBChangeDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBChangeDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7ACC7197F7BD6005950A6 /* GBChangesBaseTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBChangesBaseTask.h; sourceTree = "<group>"; };
+		3AF7ACC8197F7BD6005950A6 /* GBChangesTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBChangesTableView.h; sourceTree = "<group>"; };
+		3AF7ACC9197F7BD6005950A6 /* GBCloneTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCloneTask.h; sourceTree = "<group>"; };
+		3AF7ACCA197F7BD6005950A6 /* GBCloneWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCloneWindowController.h; sourceTree = "<group>"; };
+		3AF7ACCB197F7BD6005950A6 /* GBColorLabelPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBColorLabelPicker.h; sourceTree = "<group>"; };
+		3AF7ACCC197F7BD6005950A6 /* GBColorLabelPickerButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBColorLabelPickerButton.h; sourceTree = "<group>"; };
+		3AF7ACCD197F7BD6005950A6 /* GBCommit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCommit.h; sourceTree = "<group>"; };
+		3AF7ACCE197F7BD6005950A6 /* GBCommitCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCommitCell.h; sourceTree = "<group>"; };
+		3AF7ACCF197F7BD6005950A6 /* GBCommitPromptController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCommitPromptController.h; sourceTree = "<group>"; };
+		3AF7ACD0197F7BD6005950A6 /* GBCommittedChangesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCommittedChangesTask.h; sourceTree = "<group>"; };
+		3AF7ACD1197F7BD6005950A6 /* GBCommitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBCommitViewController.h; sourceTree = "<group>"; };
+		3AF7ACD2197F7BD6005950A6 /* GBConfirmationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBConfirmationController.h; sourceTree = "<group>"; };
+		3AF7ACD3197F7BD6005950A6 /* GBExtractFileTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBExtractFileTask.h; sourceTree = "<group>"; };
+		3AF7ACD4197F7BD6005950A6 /* GBFileEditingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBFileEditingController.h; sourceTree = "<group>"; };
+		3AF7ACD5197F7BD6005950A6 /* GBFolderMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBFolderMonitor.h; sourceTree = "<group>"; };
+		3AF7ACD6197F7BD6005950A6 /* GBGitConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBGitConfig.h; sourceTree = "<group>"; };
+		3AF7ACD7197F7BD6005950A6 /* GBGreyGradientView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBGreyGradientView.h; sourceTree = "<group>"; };
+		3AF7ACD8197F7BD6005950A6 /* GBHistoryTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBHistoryTableView.h; sourceTree = "<group>"; };
+		3AF7ACD9197F7BD6005950A6 /* GBHistoryTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBHistoryTask.h; sourceTree = "<group>"; };
+		3AF7ACDA197F7BD6005950A6 /* GBHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBHistoryViewController.h; sourceTree = "<group>"; };
+		3AF7ACDB197F7BD6005950A6 /* GBLightScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLightScroller.h; sourceTree = "<group>"; };
+		3AF7ACDC197F7BD6005950A6 /* GBLightScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLightScrollView.h; sourceTree = "<group>"; };
+		3AF7ACDD197F7BD6005950A6 /* GBLocalRefsTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLocalRefsTask.h; sourceTree = "<group>"; };
+		3AF7ACDE197F7BD6005950A6 /* GBLocalRemoteAssociationTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLocalRemoteAssociationTask.h; sourceTree = "<group>"; };
+		3AF7ACDF197F7BD6005950A6 /* GBMainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBMainWindowController.h; sourceTree = "<group>"; };
+		3AF7ACE0197F7BD6005950A6 /* GBMainWindowItem-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBMainWindowItem-Protocol.h"; sourceTree = "<group>"; };
+		3AF7ACE1197F7BD6005950A6 /* GBOptimizeRepositoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBOptimizeRepositoryController.h; sourceTree = "<group>"; };
+		3AF7ACE2197F7BD6005950A6 /* GBPlaceholderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPlaceholderViewController.h; sourceTree = "<group>"; };
+		3AF7ACE3197F7BD6005950A6 /* GBPreferencesConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesConfigViewController.h; sourceTree = "<group>"; };
+		3AF7ACE4197F7BD6005950A6 /* GBPreferencesDiffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesDiffViewController.h; sourceTree = "<group>"; };
+		3AF7ACE5197F7BD6005950A6 /* GBPreferencesGithubViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesGithubViewController.h; sourceTree = "<group>"; };
+		3AF7ACE6197F7BD6005950A6 /* GBPreferencesIgnoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesIgnoreViewController.h; sourceTree = "<group>"; };
+		3AF7ACE7197F7BD6005950A6 /* GBPreferencesLicenseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesLicenseViewController.h; sourceTree = "<group>"; };
+		3AF7ACE8197F7BD6005950A6 /* GBPreferencesUpdatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPreferencesUpdatesViewController.h; sourceTree = "<group>"; };
+		3AF7ACE9197F7BD6005950A6 /* GBPromptController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBPromptController.h; sourceTree = "<group>"; };
+		3AF7ACEA197F7BD6005950A6 /* GBRef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRef.h; sourceTree = "<group>"; };
+		3AF7ACEB197F7BD6005950A6 /* GBRefreshIndexTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRefreshIndexTask.h; sourceTree = "<group>"; };
+		3AF7ACEC197F7BD6005950A6 /* GBRemote.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRemote.h; sourceTree = "<group>"; };
+		3AF7ACED197F7BD6005950A6 /* GBRemoteRefsTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRemoteRefsTask.h; sourceTree = "<group>"; };
+		3AF7ACEE197F7BD6005950A6 /* GBRemotesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRemotesTask.h; sourceTree = "<group>"; };
+		3AF7ACEF197F7BD6005950A6 /* GBRepositoriesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoriesController.h; sourceTree = "<group>"; };
+		3AF7ACF0197F7BD6005950A6 /* GBRepositoriesGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoriesGroup.h; sourceTree = "<group>"; };
+		3AF7ACF1197F7BD6005950A6 /* GBRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepository.h; sourceTree = "<group>"; };
+		3AF7ACF2197F7BD6005950A6 /* GBRepositoryBranchesAndTagsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryBranchesAndTagsController.h; sourceTree = "<group>"; };
+		3AF7ACF3197F7BD6005950A6 /* GBRepositoryCloningController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryCloningController.h; sourceTree = "<group>"; };
+		3AF7ACF4197F7BD6005950A6 /* GBRepositoryCloningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryCloningViewController.h; sourceTree = "<group>"; };
+		3AF7ACF5197F7BD6005950A6 /* GBRepositoryConfigController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryConfigController.h; sourceTree = "<group>"; };
+		3AF7ACF6197F7BD6005950A6 /* GBRepositoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryController.h; sourceTree = "<group>"; };
+		3AF7ACF7197F7BD6005950A6 /* GBRepositoryRemotesController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryRemotesController.h; sourceTree = "<group>"; };
+		3AF7ACF8197F7BD6005950A6 /* GBRepositorySettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositorySettingsController.h; sourceTree = "<group>"; };
+		3AF7ACF9197F7BD6005950A6 /* GBRepositorySettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositorySettingsViewController.h; sourceTree = "<group>"; };
+		3AF7ACFA197F7BD6005950A6 /* GBRepositorySummaryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositorySummaryController.h; sourceTree = "<group>"; };
+		3AF7ACFB197F7BD6005950A6 /* GBRepositoryToolbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryToolbarController.h; sourceTree = "<group>"; };
+		3AF7ACFC197F7BD6005950A6 /* GBRepositoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRepositoryViewController.h; sourceTree = "<group>"; };
+		3AF7ACFD197F7BD6005950A6 /* GBRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBRootController.h; sourceTree = "<group>"; };
+		3AF7ACFE197F7BD6005950A6 /* GBSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSearch.h; sourceTree = "<group>"; };
+		3AF7ACFF197F7BD6005950A6 /* GBSearchBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSearchBarController.h; sourceTree = "<group>"; };
+		3AF7AD00197F7BD6005950A6 /* GBSearchBarControllerDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBSearchBarControllerDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD01197F7BD6005950A6 /* GBSearchQuery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSearchQuery.h; sourceTree = "<group>"; };
+		3AF7AD02197F7BD6005950A6 /* GBSidebarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSidebarCell.h; sourceTree = "<group>"; };
+		3AF7AD03197F7BD6005950A6 /* GBSidebarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSidebarController.h; sourceTree = "<group>"; };
+		3AF7AD04197F7BD6005950A6 /* GBSidebarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSidebarItem.h; sourceTree = "<group>"; };
+		3AF7AD05197F7BD6005950A6 /* GBSidebarItemObject-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBSidebarItemObject-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD06197F7BD6005950A6 /* GBSidebarOutlineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSidebarOutlineView.h; sourceTree = "<group>"; };
+		3AF7AD07197F7BD6005950A6 /* GBStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStage.h; sourceTree = "<group>"; };
+		3AF7AD08197F7BD6005950A6 /* GBStagedChangesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStagedChangesTask.h; sourceTree = "<group>"; };
+		3AF7AD09197F7BD6005950A6 /* GBStageHeaderAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStageHeaderAnimation.h; sourceTree = "<group>"; };
+		3AF7AD0A197F7BD6005950A6 /* GBStageMessageHistoryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStageMessageHistoryController.h; sourceTree = "<group>"; };
+		3AF7AD0B197F7BD6005950A6 /* GBStageShortcutHintDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStageShortcutHintDetector.h; sourceTree = "<group>"; };
+		3AF7AD0C197F7BD6005950A6 /* GBStageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStageViewController.h; sourceTree = "<group>"; };
+		3AF7AD0D197F7BD6005950A6 /* GBStash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStash.h; sourceTree = "<group>"; };
+		3AF7AD0E197F7BD6005950A6 /* GBStashListTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStashListTask.h; sourceTree = "<group>"; };
+		3AF7AD0F197F7BD6005950A6 /* GBStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBStyle.h; sourceTree = "<group>"; };
+		3AF7AD10197F7BD6005950A6 /* GBSubmodule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmodule.h; sourceTree = "<group>"; };
+		3AF7AD11197F7BD6005950A6 /* GBSubmoduleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmoduleCell.h; sourceTree = "<group>"; };
+		3AF7AD12197F7BD6005950A6 /* GBSubmoduleCloningController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmoduleCloningController.h; sourceTree = "<group>"; };
+		3AF7AD13197F7BD6005950A6 /* GBSubmoduleCloningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmoduleCloningViewController.h; sourceTree = "<group>"; };
+		3AF7AD14197F7BD6005950A6 /* GBSubmoduleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmoduleController.h; sourceTree = "<group>"; };
+		3AF7AD15197F7BD6005950A6 /* GBSubmodulesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBSubmodulesTask.h; sourceTree = "<group>"; };
+		3AF7AD16197F7BD6005950A6 /* GBTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTask.h; sourceTree = "<group>"; };
+		3AF7AD17197F7BD6005950A6 /* GBTaskWithProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBTaskWithProgress.h; sourceTree = "<group>"; };
+		3AF7AD18197F7BD6005950A6 /* GBToolbarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBToolbarController.h; sourceTree = "<group>"; };
+		3AF7AD19197F7BD6005950A6 /* GBUnstagedChangesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBUnstagedChangesTask.h; sourceTree = "<group>"; };
+		3AF7AD1A197F7BD6005950A6 /* GBUntrackedChangesTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBUntrackedChangesTask.h; sourceTree = "<group>"; };
+		3AF7AD1B197F7BD6005950A6 /* GBUserNameEmailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBUserNameEmailController.h; sourceTree = "<group>"; };
+		3AF7AD1C197F7BD6005950A6 /* GBUserpicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBUserpicController.h; sourceTree = "<group>"; };
+		3AF7AD1D197F7BD6005950A6 /* GBVersionComparator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBVersionComparator.h; sourceTree = "<group>"; };
+		3AF7AD1E197F7BD6005950A6 /* GBWelcomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBWelcomeController.h; sourceTree = "<group>"; };
+		3AF7AD1F197F7BD6005950A6 /* GBWindowControllerWithCallback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBWindowControllerWithCallback.h; sourceTree = "<group>"; };
+		3AF7AD20197F7BD6005950A6 /* GitConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitConfig.h; sourceTree = "<group>"; };
+		3AF7AD21197F7BD6005950A6 /* GitRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitRepository.h; sourceTree = "<group>"; };
+		3AF7AD22197F7BD6005950A6 /* iRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		3AF7AD23197F7BD6005950A6 /* MASPreferencesViewController-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MASPreferencesViewController-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD24197F7BD6005950A6 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		3AF7AD25197F7BD6005950A6 /* NSAlert-OAAlertHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAlert-OAAlertHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD26197F7BD6005950A6 /* NSAnimationDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAnimationDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD27197F7BD6005950A6 /* NSApplicationDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSApplicationDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD28197F7BD6005950A6 /* NSArray-OAArrayHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray-OAArrayHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD29197F7BD6005950A6 /* NSAttributedString-OAAttributedStringHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString-OAAttributedStringHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD2A197F7BD6005950A6 /* NSCoding-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCoding-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD2B197F7BD6005950A6 /* NSConnectionDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSConnectionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD2C197F7BD6005950A6 /* NSControlTextEditingDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSControlTextEditingDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD2D197F7BD6005950A6 /* NSCopying-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCopying-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD2E197F7BD6005950A6 /* NSData-OADataHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData-OADataHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD2F197F7BD6005950A6 /* NSError-OAPresent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSError-OAPresent.h"; sourceTree = "<group>"; };
+		3AF7AD30197F7BD6005950A6 /* NSFileManager-OAFileManagerHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSFileManager-OAFileManagerHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD31197F7BD6005950A6 /* NSMenu-OAMenuHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMenu-OAMenuHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD32197F7BD6005950A6 /* NSMenuDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMenuDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD33197F7BD6005950A6 /* NSMenuItem-OAMenuHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMenuItem-OAMenuHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD34197F7BD6005950A6 /* NSMutableArray-OAArrayHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray-OAArrayHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD35197F7BD6005950A6 /* NSMutableAttributedString-OAAttributedStringHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString-OAAttributedStringHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD36197F7BD6005950A6 /* NSMutableString-OAStringHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableString-OAStringHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD37197F7BD6005950A6 /* NSObject-OADispatchItemValidation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OADispatchItemValidation.h"; sourceTree = "<group>"; };
+		3AF7AD38197F7BD6005950A6 /* NSObject-OAKeyValueObserving.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OAKeyValueObserving.h"; sourceTree = "<group>"; };
+		3AF7AD39197F7BD6005950A6 /* NSObject-OAPerformBlockAfterDelay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OAPerformBlockAfterDelay.h"; sourceTree = "<group>"; };
+		3AF7AD3A197F7BD6005950A6 /* NSObject-OAPropertyListRepresentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OAPropertyListRepresentation.h"; sourceTree = "<group>"; };
+		3AF7AD3B197F7BD6005950A6 /* NSObject-OAResponderChain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OAResponderChain.h"; sourceTree = "<group>"; };
+		3AF7AD3C197F7BD6005950A6 /* NSObject-OASelectorNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-OASelectorNotifications.h"; sourceTree = "<group>"; };
+		3AF7AD3D197F7BD6005950A6 /* NSObject-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD3E197F7BD6005950A6 /* NSOpenSavePanelDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOpenSavePanelDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD3F197F7BD6005950A6 /* NSOutlineViewDataSource-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOutlineViewDataSource-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD40197F7BD6005950A6 /* NSOutlineViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSOutlineViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD41197F7BD6005950A6 /* NSPasteboardWriting-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSPasteboardWriting-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD42197F7BD6005950A6 /* NSSplitView-OASplitViewHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSplitView-OASplitViewHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD43197F7BD6005950A6 /* NSSplitViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSSplitViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD44197F7BD6005950A6 /* NSString-OAGitHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString-OAGitHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD45197F7BD6005950A6 /* NSString-OAStringHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString-OAStringHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD46197F7BD6005950A6 /* NSTableView-OATableViewHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTableView-OATableViewHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD47197F7BD6005950A6 /* NSTableViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTableViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD48197F7BD6005950A6 /* NSTabViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTabViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD49197F7BD6005950A6 /* NSTextDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4A197F7BD6005950A6 /* NSTextFieldDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextFieldDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4B197F7BD6005950A6 /* NSTextViewDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTextViewDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4C197F7BD6005950A6 /* NSToolbarDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSToolbarDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4D197F7BD6005950A6 /* NSURLConnectionDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLConnectionDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4E197F7BD6005950A6 /* NSUserInterfaceValidations-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserInterfaceValidations-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD4F197F7BD6005950A6 /* NSValidatedUserInterfaceItem-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSValidatedUserInterfaceItem-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD50197F7BD6005950A6 /* NSView-OAViewHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSView-OAViewHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD51197F7BD6005950A6 /* NSViewController-OAViewHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSViewController-OAViewHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD52197F7BD6005950A6 /* NSWindow-OAWindowControllerHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindow-OAWindowControllerHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD53197F7BD6005950A6 /* NSWindowController-OAWindowControllerHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindowController-OAWindowControllerHelpers.h"; sourceTree = "<group>"; };
+		3AF7AD54197F7BD6005950A6 /* NSWindowDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSWindowDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD55197F7BD6005950A6 /* NSXMLParserDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSXMLParserDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD56197F7BD6005950A6 /* OAActivityIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAActivityIndicator.h; sourceTree = "<group>"; };
+		3AF7AD57197F7BD6005950A6 /* OABlockGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OABlockGroup.h; sourceTree = "<group>"; };
+		3AF7AD58197F7BD6005950A6 /* OABlockMerger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OABlockMerger.h; sourceTree = "<group>"; };
+		3AF7AD59197F7BD6005950A6 /* OABlockQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OABlockQueue.h; sourceTree = "<group>"; };
+		3AF7AD5A197F7BD6005950A6 /* OABlockTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OABlockTable.h; sourceTree = "<group>"; };
+		3AF7AD5B197F7BD6005950A6 /* OABlockTransaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OABlockTransaction.h; sourceTree = "<group>"; };
+		3AF7AD5C197F7BD6005950A6 /* OAFastJumpController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAFastJumpController.h; sourceTree = "<group>"; };
+		3AF7AD5D197F7BD6005950A6 /* OAFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAFile.h; sourceTree = "<group>"; };
+		3AF7AD5E197F7BD6005950A6 /* OAFSEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAFSEvent.h; sourceTree = "<group>"; };
+		3AF7AD5F197F7BD6005950A6 /* OAFSEventStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAFSEventStream.h; sourceTree = "<group>"; };
+		3AF7AD60197F7BD6005950A6 /* OAHTTPDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAHTTPDownload.h; sourceTree = "<group>"; };
+		3AF7AD61197F7BD6005950A6 /* OAHTTPQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAHTTPQueue.h; sourceTree = "<group>"; };
+		3AF7AD62197F7BD6005950A6 /* OAKeyValueObservingListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAKeyValueObservingListener.h; sourceTree = "<group>"; };
+		3AF7AD63197F7BD6005950A6 /* OAKVONotificationCenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAKVONotificationCenter.h; sourceTree = "<group>"; };
+		3AF7AD64197F7BD6005950A6 /* OAMultipleSelection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAMultipleSelection.h; sourceTree = "<group>"; };
+		3AF7AD65197F7BD6005950A6 /* OANonScrollingScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OANonScrollingScrollView.h; sourceTree = "<group>"; };
+		3AF7AD66197F7BD6005950A6 /* OAPropertyListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAPropertyListController.h; sourceTree = "<group>"; };
+		3AF7AD67197F7BD6005950A6 /* OAPropertyListRepresentation-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAPropertyListRepresentation-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD68197F7BD6005950A6 /* OAPseudoTTY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAPseudoTTY.h; sourceTree = "<group>"; };
+		3AF7AD69197F7BD6005950A6 /* OATask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OATask.h; sourceTree = "<group>"; };
+		3AF7AD6A197F7BD6005950A6 /* OATextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OATextField.h; sourceTree = "<group>"; };
+		3AF7AD6B197F7BD6005950A6 /* OATextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OATextView.h; sourceTree = "<group>"; };
+		3AF7AD6C197F7BD6005950A6 /* OAXMLDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OAXMLDecoder.h; sourceTree = "<group>"; };
+		3AF7AD6D197F7BD6005950A6 /* QLPreviewItem-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QLPreviewItem-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD6E197F7BD6005950A6 /* QLPreviewPanelDataSource-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QLPreviewPanelDataSource-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD6F197F7BD6005950A6 /* QLPreviewPanelDelegate-Protocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QLPreviewPanelDelegate-Protocol.h"; sourceTree = "<group>"; };
+		3AF7AD70197F7BD6005950A6 /* WhiteNSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiteNSView.h; sourceTree = "<group>"; };
+		3AF7AD71197F7BD6005950A6 /* YRKSpinningProgressIndicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YRKSpinningProgressIndicator.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A174E43153FC499009EC239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A174E4A153FC499009EC239 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A174E3B153FC499009EC239 = {
+			isa = PBXGroup;
+			children = (
+				3AF7ACB0197F7BD6005950A6 /* Class Dump */,
+				3A174E4F153FC499009EC239 /* SIMBL Plugin */,
+				3A174E48153FC499009EC239 /* Frameworks */,
+				3A174E47153FC499009EC239 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A174E47153FC499009EC239 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A174E48153FC499009EC239 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A174E49153FC499009EC239 /* Cocoa.framework */,
+				3A174E4B153FC499009EC239 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3A174E4B153FC499009EC239 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3A174E4C153FC499009EC239 /* AppKit.framework */,
+				3A174E4D153FC499009EC239 /* CoreData.framework */,
+				3A174E4E153FC499009EC239 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3A174E4F153FC499009EC239 /* SIMBL Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				3A4112B4197F76F200DB0D4B /* SIMBLPlugin.h */,
+				3A4112B5197F76F200DB0D4B /* SIMBLPlugin.m */,
+				3A4112B0197F76F200DB0D4B /* JRSwizzle.h */,
+				3A4112B1197F76F200DB0D4B /* JRSwizzle.m */,
+				3A4112B3197F76F200DB0D4B /* SIMBL Plugin-Prefix.pch */,
+				3A4112B2197F76F200DB0D4B /* SIMBL Plugin-Info.plist */,
+			);
+			name = "SIMBL Plugin";
+			path = "Notification Center Tweaks SIMBL Plugin";
+			sourceTree = "<group>";
+		};
+		3AF7ACB0197F7BD6005950A6 /* Class Dump */ = {
+			isa = PBXGroup;
+			children = (
+				3AF7ACB1197F7BD6005950A6 /* CDStructures.h */,
+				3AF7ACB2197F7BD6005950A6 /* GBActivity.h */,
+				3AF7ACB3197F7BD6005950A6 /* GBActivityController.h */,
+				3AF7ACB4197F7BD6005950A6 /* GBAllStagedFilesTask.h */,
+				3AF7ACB5197F7BD6005950A6 /* GBAppDelegate.h */,
+				3AF7ACB6197F7BD6005950A6 /* GBApplication.h */,
+				3AF7ACB7197F7BD6005950A6 /* GBAskPassBooleanPromptController.h */,
+				3AF7ACB8197F7BD6005950A6 /* GBAskPassCredentialsController.h */,
+				3AF7ACB9197F7BD6005950A6 /* GBAskPassServer-Protocol.h */,
+				3AF7ACBA197F7BD6005950A6 /* GBAskPassServer.h */,
+				3AF7ACBB197F7BD6005950A6 /* GBAskPassServerClient-Protocol.h */,
+				3AF7ACBC197F7BD6005950A6 /* GBAsyncUpdater.h */,
+				3AF7ACBD197F7BD6005950A6 /* GBAuthenticatedTask.h */,
+				3AF7ACBE197F7BD6005950A6 /* GBBaseChangesController.h */,
+				3AF7ACBF197F7BD6005950A6 /* GBBasePromptController.h */,
+				3AF7ACC0197F7BD6005950A6 /* GBCell.h */,
+				3AF7ACC1197F7BD6005950A6 /* GBCellWithView.h */,
+				3AF7ACC2197F7BD6005950A6 /* GBCertificateUpdateController.h */,
+				3AF7ACC3197F7BD6005950A6 /* GBChange.h */,
+				3AF7ACC4197F7BD6005950A6 /* GBChangeCell.h */,
+				3AF7ACC5197F7BD6005950A6 /* GBChangeCheckboxCell.h */,
+				3AF7ACC6197F7BD6005950A6 /* GBChangeDelegate-Protocol.h */,
+				3AF7ACC7197F7BD6005950A6 /* GBChangesBaseTask.h */,
+				3AF7ACC8197F7BD6005950A6 /* GBChangesTableView.h */,
+				3AF7ACC9197F7BD6005950A6 /* GBCloneTask.h */,
+				3AF7ACCA197F7BD6005950A6 /* GBCloneWindowController.h */,
+				3AF7ACCB197F7BD6005950A6 /* GBColorLabelPicker.h */,
+				3AF7ACCC197F7BD6005950A6 /* GBColorLabelPickerButton.h */,
+				3AF7ACCD197F7BD6005950A6 /* GBCommit.h */,
+				3AF7ACCE197F7BD6005950A6 /* GBCommitCell.h */,
+				3AF7ACCF197F7BD6005950A6 /* GBCommitPromptController.h */,
+				3AF7ACD0197F7BD6005950A6 /* GBCommittedChangesTask.h */,
+				3AF7ACD1197F7BD6005950A6 /* GBCommitViewController.h */,
+				3AF7ACD2197F7BD6005950A6 /* GBConfirmationController.h */,
+				3AF7ACD3197F7BD6005950A6 /* GBExtractFileTask.h */,
+				3AF7ACD4197F7BD6005950A6 /* GBFileEditingController.h */,
+				3AF7ACD5197F7BD6005950A6 /* GBFolderMonitor.h */,
+				3AF7ACD6197F7BD6005950A6 /* GBGitConfig.h */,
+				3AF7ACD7197F7BD6005950A6 /* GBGreyGradientView.h */,
+				3AF7ACD8197F7BD6005950A6 /* GBHistoryTableView.h */,
+				3AF7ACD9197F7BD6005950A6 /* GBHistoryTask.h */,
+				3AF7ACDA197F7BD6005950A6 /* GBHistoryViewController.h */,
+				3AF7ACDB197F7BD6005950A6 /* GBLightScroller.h */,
+				3AF7ACDC197F7BD6005950A6 /* GBLightScrollView.h */,
+				3AF7ACDD197F7BD6005950A6 /* GBLocalRefsTask.h */,
+				3AF7ACDE197F7BD6005950A6 /* GBLocalRemoteAssociationTask.h */,
+				3AF7ACDF197F7BD6005950A6 /* GBMainWindowController.h */,
+				3AF7ACE0197F7BD6005950A6 /* GBMainWindowItem-Protocol.h */,
+				3AF7ACE1197F7BD6005950A6 /* GBOptimizeRepositoryController.h */,
+				3AF7ACE2197F7BD6005950A6 /* GBPlaceholderViewController.h */,
+				3AF7ACE3197F7BD6005950A6 /* GBPreferencesConfigViewController.h */,
+				3AF7ACE4197F7BD6005950A6 /* GBPreferencesDiffViewController.h */,
+				3AF7ACE5197F7BD6005950A6 /* GBPreferencesGithubViewController.h */,
+				3AF7ACE6197F7BD6005950A6 /* GBPreferencesIgnoreViewController.h */,
+				3AF7ACE7197F7BD6005950A6 /* GBPreferencesLicenseViewController.h */,
+				3AF7ACE8197F7BD6005950A6 /* GBPreferencesUpdatesViewController.h */,
+				3AF7ACE9197F7BD6005950A6 /* GBPromptController.h */,
+				3AF7ACEA197F7BD6005950A6 /* GBRef.h */,
+				3AF7ACEB197F7BD6005950A6 /* GBRefreshIndexTask.h */,
+				3AF7ACEC197F7BD6005950A6 /* GBRemote.h */,
+				3AF7ACED197F7BD6005950A6 /* GBRemoteRefsTask.h */,
+				3AF7ACEE197F7BD6005950A6 /* GBRemotesTask.h */,
+				3AF7ACEF197F7BD6005950A6 /* GBRepositoriesController.h */,
+				3AF7ACF0197F7BD6005950A6 /* GBRepositoriesGroup.h */,
+				3AF7ACF1197F7BD6005950A6 /* GBRepository.h */,
+				3AF7ACF2197F7BD6005950A6 /* GBRepositoryBranchesAndTagsController.h */,
+				3AF7ACF3197F7BD6005950A6 /* GBRepositoryCloningController.h */,
+				3AF7ACF4197F7BD6005950A6 /* GBRepositoryCloningViewController.h */,
+				3AF7ACF5197F7BD6005950A6 /* GBRepositoryConfigController.h */,
+				3AF7ACF6197F7BD6005950A6 /* GBRepositoryController.h */,
+				3AF7ACF7197F7BD6005950A6 /* GBRepositoryRemotesController.h */,
+				3AF7ACF8197F7BD6005950A6 /* GBRepositorySettingsController.h */,
+				3AF7ACF9197F7BD6005950A6 /* GBRepositorySettingsViewController.h */,
+				3AF7ACFA197F7BD6005950A6 /* GBRepositorySummaryController.h */,
+				3AF7ACFB197F7BD6005950A6 /* GBRepositoryToolbarController.h */,
+				3AF7ACFC197F7BD6005950A6 /* GBRepositoryViewController.h */,
+				3AF7ACFD197F7BD6005950A6 /* GBRootController.h */,
+				3AF7ACFE197F7BD6005950A6 /* GBSearch.h */,
+				3AF7ACFF197F7BD6005950A6 /* GBSearchBarController.h */,
+				3AF7AD00197F7BD6005950A6 /* GBSearchBarControllerDelegate-Protocol.h */,
+				3AF7AD01197F7BD6005950A6 /* GBSearchQuery.h */,
+				3AF7AD02197F7BD6005950A6 /* GBSidebarCell.h */,
+				3AF7AD03197F7BD6005950A6 /* GBSidebarController.h */,
+				3AF7AD04197F7BD6005950A6 /* GBSidebarItem.h */,
+				3AF7AD05197F7BD6005950A6 /* GBSidebarItemObject-Protocol.h */,
+				3AF7AD06197F7BD6005950A6 /* GBSidebarOutlineView.h */,
+				3AF7AD07197F7BD6005950A6 /* GBStage.h */,
+				3AF7AD08197F7BD6005950A6 /* GBStagedChangesTask.h */,
+				3AF7AD09197F7BD6005950A6 /* GBStageHeaderAnimation.h */,
+				3AF7AD0A197F7BD6005950A6 /* GBStageMessageHistoryController.h */,
+				3AF7AD0B197F7BD6005950A6 /* GBStageShortcutHintDetector.h */,
+				3AF7AD0C197F7BD6005950A6 /* GBStageViewController.h */,
+				3AF7AD0D197F7BD6005950A6 /* GBStash.h */,
+				3AF7AD0E197F7BD6005950A6 /* GBStashListTask.h */,
+				3AF7AD0F197F7BD6005950A6 /* GBStyle.h */,
+				3AF7AD10197F7BD6005950A6 /* GBSubmodule.h */,
+				3AF7AD11197F7BD6005950A6 /* GBSubmoduleCell.h */,
+				3AF7AD12197F7BD6005950A6 /* GBSubmoduleCloningController.h */,
+				3AF7AD13197F7BD6005950A6 /* GBSubmoduleCloningViewController.h */,
+				3AF7AD14197F7BD6005950A6 /* GBSubmoduleController.h */,
+				3AF7AD15197F7BD6005950A6 /* GBSubmodulesTask.h */,
+				3AF7AD16197F7BD6005950A6 /* GBTask.h */,
+				3AF7AD17197F7BD6005950A6 /* GBTaskWithProgress.h */,
+				3AF7AD18197F7BD6005950A6 /* GBToolbarController.h */,
+				3AF7AD19197F7BD6005950A6 /* GBUnstagedChangesTask.h */,
+				3AF7AD1A197F7BD6005950A6 /* GBUntrackedChangesTask.h */,
+				3AF7AD1B197F7BD6005950A6 /* GBUserNameEmailController.h */,
+				3AF7AD1C197F7BD6005950A6 /* GBUserpicController.h */,
+				3AF7AD1D197F7BD6005950A6 /* GBVersionComparator.h */,
+				3AF7AD1E197F7BD6005950A6 /* GBWelcomeController.h */,
+				3AF7AD1F197F7BD6005950A6 /* GBWindowControllerWithCallback.h */,
+				3AF7AD20197F7BD6005950A6 /* GitConfig.h */,
+				3AF7AD21197F7BD6005950A6 /* GitRepository.h */,
+				3AF7AD22197F7BD6005950A6 /* iRate.h */,
+				3AF7AD23197F7BD6005950A6 /* MASPreferencesViewController-Protocol.h */,
+				3AF7AD24197F7BD6005950A6 /* MASPreferencesWindowController.h */,
+				3AF7AD25197F7BD6005950A6 /* NSAlert-OAAlertHelpers.h */,
+				3AF7AD26197F7BD6005950A6 /* NSAnimationDelegate-Protocol.h */,
+				3AF7AD27197F7BD6005950A6 /* NSApplicationDelegate-Protocol.h */,
+				3AF7AD28197F7BD6005950A6 /* NSArray-OAArrayHelpers.h */,
+				3AF7AD29197F7BD6005950A6 /* NSAttributedString-OAAttributedStringHelpers.h */,
+				3AF7AD2A197F7BD6005950A6 /* NSCoding-Protocol.h */,
+				3AF7AD2B197F7BD6005950A6 /* NSConnectionDelegate-Protocol.h */,
+				3AF7AD2C197F7BD6005950A6 /* NSControlTextEditingDelegate-Protocol.h */,
+				3AF7AD2D197F7BD6005950A6 /* NSCopying-Protocol.h */,
+				3AF7AD2E197F7BD6005950A6 /* NSData-OADataHelpers.h */,
+				3AF7AD2F197F7BD6005950A6 /* NSError-OAPresent.h */,
+				3AF7AD30197F7BD6005950A6 /* NSFileManager-OAFileManagerHelpers.h */,
+				3AF7AD31197F7BD6005950A6 /* NSMenu-OAMenuHelpers.h */,
+				3AF7AD32197F7BD6005950A6 /* NSMenuDelegate-Protocol.h */,
+				3AF7AD33197F7BD6005950A6 /* NSMenuItem-OAMenuHelpers.h */,
+				3AF7AD34197F7BD6005950A6 /* NSMutableArray-OAArrayHelpers.h */,
+				3AF7AD35197F7BD6005950A6 /* NSMutableAttributedString-OAAttributedStringHelpers.h */,
+				3AF7AD36197F7BD6005950A6 /* NSMutableString-OAStringHelpers.h */,
+				3AF7AD37197F7BD6005950A6 /* NSObject-OADispatchItemValidation.h */,
+				3AF7AD38197F7BD6005950A6 /* NSObject-OAKeyValueObserving.h */,
+				3AF7AD39197F7BD6005950A6 /* NSObject-OAPerformBlockAfterDelay.h */,
+				3AF7AD3A197F7BD6005950A6 /* NSObject-OAPropertyListRepresentation.h */,
+				3AF7AD3B197F7BD6005950A6 /* NSObject-OAResponderChain.h */,
+				3AF7AD3C197F7BD6005950A6 /* NSObject-OASelectorNotifications.h */,
+				3AF7AD3D197F7BD6005950A6 /* NSObject-Protocol.h */,
+				3AF7AD3E197F7BD6005950A6 /* NSOpenSavePanelDelegate-Protocol.h */,
+				3AF7AD3F197F7BD6005950A6 /* NSOutlineViewDataSource-Protocol.h */,
+				3AF7AD40197F7BD6005950A6 /* NSOutlineViewDelegate-Protocol.h */,
+				3AF7AD41197F7BD6005950A6 /* NSPasteboardWriting-Protocol.h */,
+				3AF7AD42197F7BD6005950A6 /* NSSplitView-OASplitViewHelpers.h */,
+				3AF7AD43197F7BD6005950A6 /* NSSplitViewDelegate-Protocol.h */,
+				3AF7AD44197F7BD6005950A6 /* NSString-OAGitHelpers.h */,
+				3AF7AD45197F7BD6005950A6 /* NSString-OAStringHelpers.h */,
+				3AF7AD46197F7BD6005950A6 /* NSTableView-OATableViewHelpers.h */,
+				3AF7AD47197F7BD6005950A6 /* NSTableViewDelegate-Protocol.h */,
+				3AF7AD48197F7BD6005950A6 /* NSTabViewDelegate-Protocol.h */,
+				3AF7AD49197F7BD6005950A6 /* NSTextDelegate-Protocol.h */,
+				3AF7AD4A197F7BD6005950A6 /* NSTextFieldDelegate-Protocol.h */,
+				3AF7AD4B197F7BD6005950A6 /* NSTextViewDelegate-Protocol.h */,
+				3AF7AD4C197F7BD6005950A6 /* NSToolbarDelegate-Protocol.h */,
+				3AF7AD4D197F7BD6005950A6 /* NSURLConnectionDelegate-Protocol.h */,
+				3AF7AD4E197F7BD6005950A6 /* NSUserInterfaceValidations-Protocol.h */,
+				3AF7AD4F197F7BD6005950A6 /* NSValidatedUserInterfaceItem-Protocol.h */,
+				3AF7AD50197F7BD6005950A6 /* NSView-OAViewHelpers.h */,
+				3AF7AD51197F7BD6005950A6 /* NSViewController-OAViewHelpers.h */,
+				3AF7AD52197F7BD6005950A6 /* NSWindow-OAWindowControllerHelpers.h */,
+				3AF7AD53197F7BD6005950A6 /* NSWindowController-OAWindowControllerHelpers.h */,
+				3AF7AD54197F7BD6005950A6 /* NSWindowDelegate-Protocol.h */,
+				3AF7AD55197F7BD6005950A6 /* NSXMLParserDelegate-Protocol.h */,
+				3AF7AD56197F7BD6005950A6 /* OAActivityIndicator.h */,
+				3AF7AD57197F7BD6005950A6 /* OABlockGroup.h */,
+				3AF7AD58197F7BD6005950A6 /* OABlockMerger.h */,
+				3AF7AD59197F7BD6005950A6 /* OABlockQueue.h */,
+				3AF7AD5A197F7BD6005950A6 /* OABlockTable.h */,
+				3AF7AD5B197F7BD6005950A6 /* OABlockTransaction.h */,
+				3AF7AD5C197F7BD6005950A6 /* OAFastJumpController.h */,
+				3AF7AD5D197F7BD6005950A6 /* OAFile.h */,
+				3AF7AD5E197F7BD6005950A6 /* OAFSEvent.h */,
+				3AF7AD5F197F7BD6005950A6 /* OAFSEventStream.h */,
+				3AF7AD60197F7BD6005950A6 /* OAHTTPDownload.h */,
+				3AF7AD61197F7BD6005950A6 /* OAHTTPQueue.h */,
+				3AF7AD62197F7BD6005950A6 /* OAKeyValueObservingListener.h */,
+				3AF7AD63197F7BD6005950A6 /* OAKVONotificationCenter.h */,
+				3AF7AD64197F7BD6005950A6 /* OAMultipleSelection.h */,
+				3AF7AD65197F7BD6005950A6 /* OANonScrollingScrollView.h */,
+				3AF7AD66197F7BD6005950A6 /* OAPropertyListController.h */,
+				3AF7AD67197F7BD6005950A6 /* OAPropertyListRepresentation-Protocol.h */,
+				3AF7AD68197F7BD6005950A6 /* OAPseudoTTY.h */,
+				3AF7AD69197F7BD6005950A6 /* OATask.h */,
+				3AF7AD6A197F7BD6005950A6 /* OATextField.h */,
+				3AF7AD6B197F7BD6005950A6 /* OATextView.h */,
+				3AF7AD6C197F7BD6005950A6 /* OAXMLDecoder.h */,
+				3AF7AD6D197F7BD6005950A6 /* QLPreviewItem-Protocol.h */,
+				3AF7AD6E197F7BD6005950A6 /* QLPreviewPanelDataSource-Protocol.h */,
+				3AF7AD6F197F7BD6005950A6 /* QLPreviewPanelDelegate-Protocol.h */,
+				3AF7AD70197F7BD6005950A6 /* WhiteNSView.h */,
+				3AF7AD71197F7BD6005950A6 /* YRKSpinningProgressIndicator.h */,
+			);
+			path = "Class Dump";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A174E45153FC499009EC239 /* SIMBL Plugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A174E58153FC499009EC239 /* Build configuration list for PBXNativeTarget "SIMBL Plugin" */;
+			buildPhases = (
+				3A174E42153FC499009EC239 /* Sources */,
+				3A174E43153FC499009EC239 /* Frameworks */,
+				3A174E44153FC499009EC239 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SIMBL Plugin";
+			productName = "Hide Notification Center";
+			productReference = 3A174E46153FC499009EC239 /* Gitbox Tweaks.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A174E3D153FC499009EC239 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = 3A174E40153FC499009EC239 /* Build configuration list for PBXProject "Gitbox Tweaks" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3A174E3B153FC499009EC239;
+			productRefGroup = 3A174E47153FC499009EC239 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A174E45153FC499009EC239 /* SIMBL Plugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A174E44153FC499009EC239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A174E42153FC499009EC239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A4112B6197F76F200DB0D4B /* JRSwizzle.m in Sources */,
+				3A4112B8197F76F200DB0D4B /* SIMBLPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3A174E56153FC499009EC239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3A174E57153FC499009EC239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3A174E59153FC499009EC239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Prefix.pch";
+				INFOPLIST_FILE = "$(TARGET_NAME)/$(TARGET_NAME)-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins/";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3A174E5A153FC499009EC239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Prefix.pch";
+				INFOPLIST_FILE = "$(TARGET_NAME)/$(TARGET_NAME)-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Application Support/SIMBL/Plugins/";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				VALID_ARCHS = x86_64;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A174E40153FC499009EC239 /* Build configuration list for PBXProject "Gitbox Tweaks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A174E56153FC499009EC239 /* Debug */,
+				3A174E57153FC499009EC239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A174E58153FC499009EC239 /* Build configuration list for PBXNativeTarget "SIMBL Plugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A174E59153FC499009EC239 /* Debug */,
+				3A174E5A153FC499009EC239 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A174E3D153FC499009EC239 /* Project object */;
+}
