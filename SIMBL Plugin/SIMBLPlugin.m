@@ -17,6 +17,8 @@
 #import "GBRootController.h"
 #import "GBSidebarController.h"
 #import "GBMainWindowController.h"
+#import "GBToolbarController.h"
+#import "GBGreyGradientView.h"
 
 @implementation NSObject (SIMBLPlugin)
 
@@ -103,7 +105,7 @@
 {
     SIMBLPlugin *plugin = [SIMBLPlugin sharedPlugin];
     [plugin swizzleMethods];
-    [plugin refreshSidebar];
+    [plugin setupElements];
 }
 
 - (void)swizzleMethods;
@@ -114,9 +116,18 @@
     SWIZZLE(@"GBSidebarCell", image, SIMBL_image);
 }
 
-- (void)refreshSidebar;
+- (void)setupElements;
 {
     GBAppDelegate *delegate = (GBAppDelegate *)[NSApp delegate];
+
+    NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
+
+    NSToolbarItem *plusToolbarItem = toolbar.items[0];
+    plusToolbarItem.image = [self imageNamed:@"GBToolbarPlus"];
+
+    NSToolbarItem *gearToolbarItem = toolbar.items[1];
+    gearToolbarItem.image = [self imageNamed:@"GBToolbarGear"];
+
     GBSidebarController *sidebar = delegate.windowController.sidebarController;
     [sidebar updateContents];
 }

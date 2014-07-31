@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A174E4A153FC499009EC239 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A174E49153FC499009EC239 /* Cocoa.framework */; };
+		3A3C9645198A1C6500924530 /* GBToolbarGear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C963F198A1C6500924530 /* GBToolbarGear.png */; };
+		3A3C9646198A1C6500924530 /* GBToolbarGear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9640198A1C6500924530 /* GBToolbarGear@2x.png */; };
+		3A3C9647198A1C6500924530 /* GBToolbarMinus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9641198A1C6500924530 /* GBToolbarMinus.png */; };
+		3A3C9648198A1C6500924530 /* GBToolbarMinus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9642198A1C6500924530 /* GBToolbarMinus@2x.png */; };
+		3A3C9649198A1C6500924530 /* GBToolbarPlus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9643198A1C6500924530 /* GBToolbarPlus.png */; };
+		3A3C964A198A1C6500924530 /* GBToolbarPlus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9644198A1C6500924530 /* GBToolbarPlus@2x.png */; };
 		3A4112B6197F76F200DB0D4B /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4112B1197F76F200DB0D4B /* JRSwizzle.m */; };
 		3A4112B8197F76F200DB0D4B /* SIMBLPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A4112B5197F76F200DB0D4B /* SIMBLPlugin.m */; };
 		3AC5FCBC1989F8A1001E85CE /* GBSidebarGroupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC5FCB41989F8A1001E85CE /* GBSidebarGroupIcon.png */; };
@@ -26,6 +32,12 @@
 		3A174E4C153FC499009EC239 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		3A174E4D153FC499009EC239 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3A174E4E153FC499009EC239 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3A3C963F198A1C6500924530 /* GBToolbarGear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBToolbarGear.png; sourceTree = "<group>"; };
+		3A3C9640198A1C6500924530 /* GBToolbarGear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBToolbarGear@2x.png"; sourceTree = "<group>"; };
+		3A3C9641198A1C6500924530 /* GBToolbarMinus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBToolbarMinus.png; sourceTree = "<group>"; };
+		3A3C9642198A1C6500924530 /* GBToolbarMinus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBToolbarMinus@2x.png"; sourceTree = "<group>"; };
+		3A3C9643198A1C6500924530 /* GBToolbarPlus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBToolbarPlus.png; sourceTree = "<group>"; };
+		3A3C9644198A1C6500924530 /* GBToolbarPlus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBToolbarPlus@2x.png"; sourceTree = "<group>"; };
 		3A4112B0197F76F200DB0D4B /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = "SIMBL Plugin/JRSwizzle.h"; sourceTree = SOURCE_ROOT; };
 		3A4112B1197F76F200DB0D4B /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = "SIMBL Plugin/JRSwizzle.m"; sourceTree = SOURCE_ROOT; };
 		3A4112B2197F76F200DB0D4B /* SIMBL Plugin-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SIMBL Plugin-Info.plist"; path = "SIMBL Plugin/SIMBL Plugin-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -302,6 +314,12 @@
 		3AC5FCB31989F8A1001E85CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A3C963F198A1C6500924530 /* GBToolbarGear.png */,
+				3A3C9640198A1C6500924530 /* GBToolbarGear@2x.png */,
+				3A3C9641198A1C6500924530 /* GBToolbarMinus.png */,
+				3A3C9642198A1C6500924530 /* GBToolbarMinus@2x.png */,
+				3A3C9643198A1C6500924530 /* GBToolbarPlus.png */,
+				3A3C9644198A1C6500924530 /* GBToolbarPlus@2x.png */,
 				3AC5FCB41989F8A1001E85CE /* GBSidebarGroupIcon.png */,
 				3AC5FCB51989F8A1001E85CE /* GBSidebarGroupIcon@2x.png */,
 				3AC5FCB61989F8A1001E85CE /* GBSidebarRepositoryIcon.png */,
@@ -569,10 +587,16 @@
 				3AC5FCC01989F8A1001E85CE /* GBSidebarSubmoduleIcon.png in Resources */,
 				3AC5FCBC1989F8A1001E85CE /* GBSidebarGroupIcon.png in Resources */,
 				3AC5FCC11989F8A1001E85CE /* GBSidebarSubmoduleIcon@2x.png in Resources */,
+				3A3C964A198A1C6500924530 /* GBToolbarPlus@2x.png in Resources */,
 				3AC5FCBD1989F8A1001E85CE /* GBSidebarGroupIcon@2x.png in Resources */,
+				3A3C9647198A1C6500924530 /* GBToolbarMinus.png in Resources */,
+				3A3C9645198A1C6500924530 /* GBToolbarGear.png in Resources */,
+				3A3C9648198A1C6500924530 /* GBToolbarMinus@2x.png in Resources */,
 				3AC5FCBE1989F8A1001E85CE /* GBSidebarRepositoryIcon.png in Resources */,
+				3A3C9649198A1C6500924530 /* GBToolbarPlus.png in Resources */,
 				3AC5FCBF1989F8A1001E85CE /* GBSidebarRepositoryIcon@2x.png in Resources */,
 				3AC5FCC21989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png in Resources */,
+				3A3C9646198A1C6500924530 /* GBToolbarGear@2x.png in Resources */,
 				3AC5FCC31989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
