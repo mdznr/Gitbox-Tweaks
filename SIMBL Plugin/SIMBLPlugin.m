@@ -23,21 +23,21 @@
 
 @implementation NSObject (SIMBLPlugin)
 
-- (void)SIMBL_updateHeaderSize;
+- (void)GBCommitViewController_updateHeaderSize;
 {
     GBCommitViewController *commitViewController = (GBCommitViewController *)self;
     commitViewController.messageTextView.font = [[SIMBLPlugin sharedPlugin] commitMessageFont];
-    [self SIMBL_updateHeaderSize];
+    [self GBCommitViewController_updateHeaderSize];
 }
 
-- (void)SIMBL_updateHeaderSizeAnimating:(BOOL)animating;
+- (void)GBStageViewController_updateHeaderSizeAnimating:(BOOL)animating;
 {
     GBStageViewController *stageViewController = (GBStageViewController *)self;
     stageViewController.messageTextView.font = [[SIMBLPlugin sharedPlugin] commitMessageFont];
-    [self SIMBL_updateHeaderSizeAnimating:animating];
+    [self GBStageViewController_updateHeaderSizeAnimating:animating];
 }
 
-- (void)SIMBL_drawSyncStatusIconInRect:(NSRect)rect;
+- (void)GBCommitCell_drawSyncStatusIconInRect:(NSRect)rect;
 {
     GBCommitCell *cell = (GBCommitCell *)self;
     CGFloat dimensions = 8;
@@ -48,15 +48,15 @@
     [circle fill];
 }
 
-- (NSImage *)SIMBL_image;
+- (NSImage *)GBSidebarCell_image;
 {
-    NSImage *image = [self SIMBL_image];
+    NSImage *image = [self GBSidebarCell_image];
     return [[SIMBLPlugin sharedPlugin] replacementImages][image.name] ? : image;
 }
 
-- (double)SIMBL_sidebarPadding;
+- (double)GBToolbarController_sidebarPadding;
 {
-    double padding = [self SIMBL_sidebarPadding];
+    double padding = [self GBToolbarController_sidebarPadding];
 
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBToolbarController *toolbarController = (GBToolbarController *)self;
@@ -124,11 +124,11 @@
 
 - (void)swizzleMethods;
 {
-    SWIZZLE(@"GBCommitViewController", updateHeaderSize, SIMBL_updateHeaderSize);
-    SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, SIMBL_updateHeaderSizeAnimating:);
-    SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, SIMBL_drawSyncStatusIconInRect:);
-    SWIZZLE(@"GBSidebarCell", image, SIMBL_image);
-    SWIZZLE(@"GBToolbarController", sidebarPadding, SIMBL_sidebarPadding);
+    SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
+    SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);
+    SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
+    SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
+    SWIZZLE(@"GBToolbarController", sidebarPadding, GBToolbarController_sidebarPadding);
 }
 
 - (void)setupElements;
