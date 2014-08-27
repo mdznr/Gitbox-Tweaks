@@ -24,6 +24,12 @@
 		3AC5FCC11989F8A1001E85CE /* GBSidebarSubmoduleIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC5FCB91989F8A1001E85CE /* GBSidebarSubmoduleIcon@2x.png */; };
 		3AC5FCC21989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC5FCBA1989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png */; };
 		3AC5FCC31989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC5FCBB1989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon@2x.png */; };
+		3AD6245319AD97F800A46922 /* GBBadgeTagCenter.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6244D19AD97F800A46922 /* GBBadgeTagCenter.png */; };
+		3AD6245419AD97F800A46922 /* GBBadgeTagCenter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6244E19AD97F800A46922 /* GBBadgeTagCenter@2x.png */; };
+		3AD6245519AD97F800A46922 /* GBBadgeTagLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6244F19AD97F800A46922 /* GBBadgeTagLeft.png */; };
+		3AD6245619AD97F800A46922 /* GBBadgeTagLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6245019AD97F800A46922 /* GBBadgeTagLeft@2x.png */; };
+		3AD6245719AD97F800A46922 /* GBBadgeTagRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6245119AD97F800A46922 /* GBBadgeTagRight.png */; };
+		3AD6245819AD97F800A46922 /* GBBadgeTagRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AD6245219AD97F800A46922 /* GBBadgeTagRight@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +58,12 @@
 		3AC5FCB91989F8A1001E85CE /* GBSidebarSubmoduleIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBSidebarSubmoduleIcon@2x.png"; sourceTree = "<group>"; };
 		3AC5FCBA1989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBSidebarSubmoduleMissingIcon.png; sourceTree = "<group>"; };
 		3AC5FCBB1989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBSidebarSubmoduleMissingIcon@2x.png"; sourceTree = "<group>"; };
+		3AD6244D19AD97F800A46922 /* GBBadgeTagCenter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBBadgeTagCenter.png; sourceTree = "<group>"; };
+		3AD6244E19AD97F800A46922 /* GBBadgeTagCenter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBBadgeTagCenter@2x.png"; sourceTree = "<group>"; };
+		3AD6244F19AD97F800A46922 /* GBBadgeTagLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBBadgeTagLeft.png; sourceTree = "<group>"; };
+		3AD6245019AD97F800A46922 /* GBBadgeTagLeft@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBBadgeTagLeft@2x.png"; sourceTree = "<group>"; };
+		3AD6245119AD97F800A46922 /* GBBadgeTagRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GBBadgeTagRight.png; sourceTree = "<group>"; };
+		3AD6245219AD97F800A46922 /* GBBadgeTagRight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GBBadgeTagRight@2x.png"; sourceTree = "<group>"; };
 		3AF7ACB1197F7BD6005950A6 /* CDStructures.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
 		3AF7ACB2197F7BD6005950A6 /* GBActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBActivity.h; sourceTree = "<group>"; };
 		3AF7ACB3197F7BD6005950A6 /* GBActivityController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBActivityController.h; sourceTree = "<group>"; };
@@ -314,6 +326,12 @@
 		3AC5FCB31989F8A1001E85CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3AD6244D19AD97F800A46922 /* GBBadgeTagCenter.png */,
+				3AD6244E19AD97F800A46922 /* GBBadgeTagCenter@2x.png */,
+				3AD6244F19AD97F800A46922 /* GBBadgeTagLeft.png */,
+				3AD6245019AD97F800A46922 /* GBBadgeTagLeft@2x.png */,
+				3AD6245119AD97F800A46922 /* GBBadgeTagRight.png */,
+				3AD6245219AD97F800A46922 /* GBBadgeTagRight@2x.png */,
 				3A3C963F198A1C6500924530 /* GBToolbarGear.png */,
 				3A3C9640198A1C6500924530 /* GBToolbarGear@2x.png */,
 				3A3C9641198A1C6500924530 /* GBToolbarMinus.png */,
@@ -585,17 +603,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC5FCC01989F8A1001E85CE /* GBSidebarSubmoduleIcon.png in Resources */,
+				3AD6245819AD97F800A46922 /* GBBadgeTagRight@2x.png in Resources */,
+				3AD6245319AD97F800A46922 /* GBBadgeTagCenter.png in Resources */,
 				3AC5FCBC1989F8A1001E85CE /* GBSidebarGroupIcon.png in Resources */,
 				3AC5FCC11989F8A1001E85CE /* GBSidebarSubmoduleIcon@2x.png in Resources */,
 				3A3C964A198A1C6500924530 /* GBToolbarPlus@2x.png in Resources */,
+				3AD6245719AD97F800A46922 /* GBBadgeTagRight.png in Resources */,
 				3AC5FCBD1989F8A1001E85CE /* GBSidebarGroupIcon@2x.png in Resources */,
 				3A3C9647198A1C6500924530 /* GBToolbarMinus.png in Resources */,
+				3AD6245619AD97F800A46922 /* GBBadgeTagLeft@2x.png in Resources */,
 				3A3C9645198A1C6500924530 /* GBToolbarGear.png in Resources */,
 				3A3C9648198A1C6500924530 /* GBToolbarMinus@2x.png in Resources */,
 				3AC5FCBE1989F8A1001E85CE /* GBSidebarRepositoryIcon.png in Resources */,
 				3A3C9649198A1C6500924530 /* GBToolbarPlus.png in Resources */,
 				3AC5FCBF1989F8A1001E85CE /* GBSidebarRepositoryIcon@2x.png in Resources */,
 				3AC5FCC21989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png in Resources */,
+				3AD6245519AD97F800A46922 /* GBBadgeTagLeft.png in Resources */,
+				3AD6245419AD97F800A46922 /* GBBadgeTagCenter@2x.png in Resources */,
 				3A3C9646198A1C6500924530 /* GBToolbarGear@2x.png in Resources */,
 				3AC5FCC31989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon@2x.png in Resources */,
 			);

@@ -67,6 +67,12 @@
     return padding;
 }
 
++ (NSImage *)NSImage_imageNamed:(NSString *)name;
+{
+    NSImage *image = [self NSImage_imageNamed:name];
+    return [[SIMBLPlugin sharedPlugin] replacementImages][image.name.stringByDeletingPathExtension] ? : image;
+}
+
 @end
 
 @implementation SIMBLPlugin
@@ -110,7 +116,10 @@
         @"GBSidebarGroupIcon": [self imageNamed:@"GBSidebarGroupIcon"],
         @"GBSidebarRepositoryIcon": [self imageNamed:@"GBSidebarRepositoryIcon"],
         @"GBSidebarSubmoduleIcon": [self imageNamed:@"GBSidebarSubmoduleIcon"],
-        @"GBSidebarSubmoduleMissingIcon": [self imageNamed:@"GBSidebarSubmoduleMissingIcon"]
+        @"GBSidebarSubmoduleMissingIcon": [self imageNamed:@"GBSidebarSubmoduleMissingIcon"],
+        @"GBBadgeTagLeft": [self imageNamed:@"GBBadgeTagLeft"],
+        @"GBBadgeTagCenter": [self imageNamed:@"GBBadgeTagCenter"],
+        @"GBBadgeTagRight": [self imageNamed:@"GBBadgeTagRight"],
     };
     return self;
 }
@@ -129,6 +138,7 @@
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
     SWIZZLE(@"GBToolbarController", sidebarPadding, GBToolbarController_sidebarPadding);
+    SWIZZLE_CLASS(@"NSImage", imageNamed:, NSImage_imageNamed:);
 }
 
 - (void)setupElements;
