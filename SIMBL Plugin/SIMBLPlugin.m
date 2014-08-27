@@ -19,6 +19,7 @@
 #import "GBMainWindowController.h"
 #import "GBToolbarController.h"
 #import "GBGreyGradientView.h"
+#import "GBMainWindowController.h"
 
 @implementation NSObject (SIMBLPlugin)
 
@@ -51,6 +52,19 @@
 {
     NSImage *image = [self SIMBL_image];
     return [[SIMBLPlugin sharedPlugin] replacementImages][image.name] ? : image;
+}
+
+- (double)SIMBL_sidebarPadding;
+{
+    double padding = [self SIMBL_sidebarPadding];
+
+    if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
+        GBToolbarController *toolbarController = (GBToolbarController *)self;
+        if (toolbarController.window.titleVisibility == NSWindowTitleHidden)
+            padding -= 70.0;
+    }
+
+    return padding;
 }
 
 @end
@@ -114,6 +128,7 @@
     SWIZZLE(@"GBStageViewController", updateHeader, SIMBL_updateHeader);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, SIMBL_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, SIMBL_image);
+    SWIZZLE(@"GBToolbarController", sidebarPadding, SIMBL_sidebarPadding);
 }
 
 - (void)setupElements;
@@ -130,6 +145,11 @@
 
     GBSidebarController *sidebar = delegate.windowController.sidebarController;
     [sidebar updateContents];
+
+    if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
+        GBMainWindowController *windowController = delegate.windowController;
+        windowController.window.titleVisibility = NSWindowTitleHidden;
+    }
 }
 
 @end
