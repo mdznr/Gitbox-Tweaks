@@ -19,4 +19,6 @@
 @property (nonatomic) NSFont *commitMessageFont;
 @property (nonatomic) NSDictionary *replacementImages;
 
+- (void)setupElements;
+
 @end

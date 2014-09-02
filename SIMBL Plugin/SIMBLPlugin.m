@@ -145,16 +145,28 @@
 {
     GBAppDelegate *delegate = (GBAppDelegate *)[NSApp delegate];
 
+    GBSidebarController *sidebar = delegate.windowController.sidebarController;
+    [sidebar updateContents];
+
     NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
 
     NSToolbarItem *plusToolbarItem = toolbar.items[0];
-    plusToolbarItem.image = [self imageNamed:@"GBToolbarPlus"];
+    CGSize size = plusToolbarItem.minSize;
+    size.width += 6;
+    plusToolbarItem.minSize = size;
+    plusToolbarItem.maxSize = size;
+    NSImage *plus = [self imageNamed:@"GBToolbarPlus"];
+    plus.template = YES;
+    NSPopUpButton *plusButton = (NSPopUpButton *)plusToolbarItem.view;
+    [plusButton.menu.itemArray[0] setImage:plus];
+    NSPopUpButtonCell *plusCell = plusButton.cell;
+    plusCell.imageScaling = NSImageScaleNone;
+    plusCell.arrowPosition = NSPopUpArrowAtBottom;
 
+    NSImage *gear = [self imageNamed:@"GBToolbarGear"];
+    gear.template = YES;
     NSToolbarItem *gearToolbarItem = toolbar.items[1];
-    gearToolbarItem.image = [self imageNamed:@"GBToolbarGear"];
-
-    GBSidebarController *sidebar = delegate.windowController.sidebarController;
-    [sidebar updateContents];
+    gearToolbarItem.image = gear;
 
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBMainWindowController *windowController = delegate.windowController;
