@@ -18,6 +18,7 @@
 @property (nonatomic) NSBundle *bundle;
 @property (nonatomic) NSFont *commitMessageFont;
 @property (nonatomic) NSDictionary *replacementImages;
+@property (nonatomic) NSData *headerRTFTemplate;
 
 - (void)setupElements;
 

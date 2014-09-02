@@ -67,6 +67,11 @@
     return padding;
 }
 
+- (NSData *)GBCommitViewController_headerRTFTemplate;
+{
+    return [[SIMBLPlugin sharedPlugin] headerRTFTemplate];
+}
+
 + (NSImage *)NSImage_imageNamed:(NSString *)name;
 {
     NSImage *image = [self NSImage_imageNamed:name];
@@ -121,6 +126,7 @@
         @"GBBadgeTagCenter": [self imageNamed:@"GBBadgeTagCenter"],
         @"GBBadgeTagRight": [self imageNamed:@"GBBadgeTagRight"],
     };
+    self.headerRTFTemplate = [NSData dataWithContentsOfURL:[self.bundle URLForResource:@"GBCommitViewControllerHeader" withExtension:@"rtf"]];
     return self;
 }
 
@@ -134,6 +140,7 @@
 - (void)swizzleMethods;
 {
     SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
+    SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
     SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
