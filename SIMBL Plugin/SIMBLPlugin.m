@@ -61,7 +61,7 @@
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBToolbarController *toolbarController = (GBToolbarController *)self;
         if (toolbarController.window.titleVisibility == NSWindowTitleHidden)
-            padding -= 70.0;
+            padding -= 76.0;
     }
 
     return padding;
