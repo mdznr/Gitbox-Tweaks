@@ -151,17 +151,20 @@
     NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
 
     NSToolbarItem *plusToolbarItem = toolbar.items[0];
-    CGSize size = plusToolbarItem.minSize;
-    size.width += 6;
-    plusToolbarItem.minSize = size;
-    plusToolbarItem.maxSize = size;
     NSImage *plus = [self imageNamed:@"GBToolbarPlus"];
     plus.template = YES;
     NSPopUpButton *plusButton = (NSPopUpButton *)plusToolbarItem.view;
     [plusButton.menu.itemArray[0] setImage:plus];
-    NSPopUpButtonCell *plusCell = plusButton.cell;
-    plusCell.imageScaling = NSImageScaleNone;
-    plusCell.arrowPosition = NSPopUpArrowAtBottom;
+    if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
+        // Yosemite Beta 7 seems to not center the image on NSPopUpButton if the arrow is disabled.
+        CGSize size = plusToolbarItem.minSize;
+        size.width += 6;
+        plusToolbarItem.minSize = size;
+        plusToolbarItem.maxSize = size;
+        NSPopUpButtonCell *plusCell = plusButton.cell;
+        plusCell.imageScaling = NSImageScaleNone;
+        plusCell.arrowPosition = NSPopUpArrowAtBottom;
+    }
 
     NSImage *gear = [self imageNamed:@"GBToolbarGear"];
     gear.template = YES;
