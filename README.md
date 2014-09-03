@@ -2,6 +2,8 @@
 
 SIMBL plugin for Gitbox. Improves support for Retina displays and Yosemite.
 
+![Screenshot](Gitbox-Tweaks.jpg)
+
 ### Installation
 
 1. Install [EasySIMBL][].
