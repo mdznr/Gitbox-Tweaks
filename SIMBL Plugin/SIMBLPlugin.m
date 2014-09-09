@@ -21,6 +21,13 @@
 #import "GBGreyGradientView.h"
 #import "GBMainWindowController.h"
 
+@interface SIMBLPlugin ()
+
+- (void)setupElements;
+- (void)setupGearButton;
+
+@end
+
 @implementation NSObject (SIMBLPlugin)
 
 - (void)GBCommitViewController_updateHeaderSize;
@@ -76,6 +83,12 @@
 {
     NSImage *image = [self NSImage_imageNamed:name];
     return [[SIMBLPlugin sharedPlugin] replacementImages][image.name.stringByDeletingPathExtension] ? : image;
+}
+
+- (void)GBMainWindowController_rootControllerDidChangeSelection:(id)sender;
+{
+    [self GBMainWindowController_rootControllerDidChangeSelection:sender];
+    [[SIMBLPlugin sharedPlugin] setupGearButton];
 }
 
 @end
@@ -145,6 +158,7 @@
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
     SWIZZLE(@"GBToolbarController", sidebarPadding, GBToolbarController_sidebarPadding);
+    SWIZZLE(@"GBMainWindowController", rootControllerDidChangeSelection:, GBMainWindowController_rootControllerDidChangeSelection:);
     SWIZZLE_CLASS(@"NSImage", imageNamed:, NSImage_imageNamed:);
 }
 
@@ -155,8 +169,12 @@
     GBSidebarController *sidebar = delegate.windowController.sidebarController;
     [sidebar updateContents];
 
-    NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
+    if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
+        GBMainWindowController *windowController = delegate.windowController;
+        windowController.window.titleVisibility = NSWindowTitleHidden;
+    }
 
+    NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
     NSToolbarItem *plusToolbarItem = toolbar.items[0];
     NSImage *plus = [self imageNamed:@"GBToolbarPlus"];
     plus.template = YES;
@@ -173,15 +191,17 @@
         plusCell.arrowPosition = NSPopUpArrowAtBottom;
     }
 
+    [self setupGearButton];
+}
+
+- (void)setupGearButton;
+{
+    GBAppDelegate *delegate = (GBAppDelegate *)[NSApp delegate];
+    NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
     NSImage *gear = [self imageNamed:@"GBToolbarGear"];
     gear.template = YES;
     NSToolbarItem *gearToolbarItem = toolbar.items[1];
     gearToolbarItem.image = gear;
-
-    if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
-        GBMainWindowController *windowController = delegate.windowController;
-        windowController.window.titleVisibility = NSWindowTitleHidden;
-    }
 }
 
 @end

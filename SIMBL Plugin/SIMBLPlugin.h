@@ -20,6 +20,4 @@
 @property (nonatomic) NSDictionary *replacementImages;
 @property (nonatomic) NSData *headerRTFTemplate;
 
-- (void)setupElements;
-
 @end
