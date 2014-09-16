@@ -6,8 +6,6 @@
 
 #import <AppKit/NSResponder.h>
 
-#import "NSToolbarDelegate-Protocol.h"
-
 @class NSToolbar, NSToolbarItem, NSWindow;
 
 __attribute__((visibility("hidden")))
