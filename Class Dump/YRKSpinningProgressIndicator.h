@@ -14,7 +14,7 @@ __attribute__((visibility("hidden")))
     int _position;
     int _numFins;
     double _animationAngel;
-    id *_finColors;
+    id _finColors;
     BOOL _isAnimating;
     BOOL _isFadingOut;
     NSTimer *_animationTimer;

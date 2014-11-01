@@ -20,6 +20,7 @@
 #import "GBToolbarController.h"
 #import "GBGreyGradientView.h"
 #import "GBMainWindowController.h"
+#import "YRKSpinningProgressIndicator.h"
 
 @interface SIMBLPlugin ()
 
@@ -91,6 +92,13 @@
     [[SIMBLPlugin sharedPlugin] setupGearButton];
 }
 
+- (id)YRKSpinningProgressIndicator_initWithFrame:(NSRect)frame;
+{
+    YRKSpinningProgressIndicator *inddicator = [self YRKSpinningProgressIndicator_initWithFrame:frame];
+    [inddicator setDrawsBackground:YES];
+    return inddicator;
+}
+
 @end
 
 @implementation SIMBLPlugin
@@ -160,6 +168,7 @@
     SWIZZLE(@"GBToolbarController", sidebarPadding, GBToolbarController_sidebarPadding);
     SWIZZLE(@"GBMainWindowController", rootControllerDidChangeSelection:, GBMainWindowController_rootControllerDidChangeSelection:);
     SWIZZLE_CLASS(@"NSImage", imageNamed:, NSImage_imageNamed:);
+    SWIZZLE(@"YRKSpinningProgressIndicator", initWithFrame:, YRKSpinningProgressIndicator_initWithFrame:);
 }
 
 - (void)setupElements;
