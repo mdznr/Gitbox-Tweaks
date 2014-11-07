@@ -182,13 +182,6 @@
     SWIZZLE(@"YRKSpinningProgressIndicator", initWithFrame:, YRKSpinningProgressIndicator_initWithFrame:);
 }
 
-- (CGFloat)titleBarHeight;
-{
-    NSRect frame = NSMakeRect (0, 0, 100, 100);
-    NSRect contentRect = [NSWindow contentRectForFrameRect:frame styleMask:NSTitledWindowMask];
-    return (frame.size.height - contentRect.size.height);
-}
-
 - (void)setupElements;
 {
     GBAppDelegate *delegate = (GBAppDelegate *)[NSApp delegate];
@@ -199,11 +192,6 @@
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBMainWindowController *windowController = delegate.windowController;
         windowController.window.titleVisibility = NSWindowTitleHidden;
-        CGFloat titleBarHeight = self.titleBarHeight;
-        NSRect windowFrame = windowController.window.frame;
-        windowFrame.size.height -= titleBarHeight;
-        windowFrame.origin.y += titleBarHeight;
-        [windowController.window setFrame:windowFrame display:YES];
     }
 
     NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
