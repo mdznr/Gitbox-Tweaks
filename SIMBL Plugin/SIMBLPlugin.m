@@ -20,6 +20,7 @@
 #import "GBToolbarController.h"
 #import "GBGreyGradientView.h"
 #import "GBMainWindowController.h"
+#import "GBSidebarCell.h"
 #import "YRKSpinningProgressIndicator.h"
 
 @interface SIMBLPlugin ()
@@ -60,6 +61,15 @@
 {
     NSImage *image = [self GBSidebarCell_image];
     return [[SIMBLPlugin sharedPlugin] replacementImages][image.name] ? : image;
+}
+
+- (void)GBSidebarCell_drawTextInRect:(NSRect)rect;
+{
+    GBSidebarCell *cell = (GBSidebarCell *)self;
+    NSMutableAttributedString *title = cell.attributedStringValue.mutableCopy;
+    NSRange range = NSMakeRange(0, title.length);
+    [title addAttribute:NSFontAttributeName value:[NSFont systemFontOfSize:11] range:range];
+    [title drawInRect:rect];
 }
 
 - (double)GBToolbarController_sidebarPadding;
@@ -165,6 +175,7 @@
     SWIZZLE(@"GBStageViewController", updateHeader, GBStageViewController_updateHeader);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
+    SWIZZLE(@"GBSidebarCell", drawTextInRect:, GBSidebarCell_drawTextInRect:);
     SWIZZLE(@"GBToolbarController", sidebarPadding, GBToolbarController_sidebarPadding);
     SWIZZLE(@"GBMainWindowController", rootControllerDidChangeSelection:, GBMainWindowController_rootControllerDidChangeSelection:);
     SWIZZLE_CLASS(@"NSImage", imageNamed:, NSImage_imageNamed:);
