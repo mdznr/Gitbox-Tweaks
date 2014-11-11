@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0CF3571A120642002C4836 /* Gitbox.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3A0CF3561A120642002C4836 /* Gitbox.icns */; };
 		3A174E4A153FC499009EC239 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A174E49153FC499009EC239 /* Cocoa.framework */; };
 		3A3C9645198A1C6500924530 /* GBToolbarGear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C963F198A1C6500924530 /* GBToolbarGear.png */; };
 		3A3C9646198A1C6500924530 /* GBToolbarGear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A3C9640198A1C6500924530 /* GBToolbarGear@2x.png */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A0CF3561A120642002C4836 /* Gitbox.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Gitbox.icns; sourceTree = "<group>"; };
 		3A174E46153FC499009EC239 /* Gitbox Tweaks SIMBL Plugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gitbox Tweaks SIMBL Plugin.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A174E49153FC499009EC239 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3A174E4C153FC499009EC239 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -328,6 +330,7 @@
 		3AC5FCB31989F8A1001E85CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3A0CF3561A120642002C4836 /* Gitbox.icns */,
 				3AC14F5219B667420025B387 /* GBCommitViewControllerHeader.rtf */,
 				3AD6244D19AD97F800A46922 /* GBBadgeTagCenter.png */,
 				3AD6244E19AD97F800A46922 /* GBBadgeTagCenter@2x.png */,
@@ -620,6 +623,7 @@
 				3AC5FCBE1989F8A1001E85CE /* GBSidebarRepositoryIcon.png in Resources */,
 				3A3C9649198A1C6500924530 /* GBToolbarPlus.png in Resources */,
 				3AC5FCBF1989F8A1001E85CE /* GBSidebarRepositoryIcon@2x.png in Resources */,
+				3A0CF3571A120642002C4836 /* Gitbox.icns in Resources */,
 				3AC5FCC21989F8A1001E85CE /* GBSidebarSubmoduleMissingIcon.png in Resources */,
 				3AD6245519AD97F800A46922 /* GBBadgeTagLeft.png in Resources */,
 				3AD6245419AD97F800A46922 /* GBBadgeTagCenter@2x.png in Resources */,

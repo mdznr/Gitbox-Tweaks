@@ -23,6 +23,8 @@
 #import "GBSidebarCell.h"
 #import "YRKSpinningProgressIndicator.h"
 
+NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
+
 @interface SIMBLPlugin ()
 
 - (void)setupElements;
@@ -212,6 +214,7 @@
     }
 
     [self setupGearButton];
+    [self setupCustomIconIfNecessary];
 }
 
 - (void)setupGearButton;
@@ -222,6 +225,36 @@
     gear.template = YES;
     NSToolbarItem *gearToolbarItem = toolbar.items[1];
     gearToolbarItem.image = gear;
+}
+
+- (NSImage *)customIcon;
+{
+    return [self imageNamed:@"Gitbox.icns"];
+}
+
+- (void)setupCustomIconIfNecessary;
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:GBTweaksPromptForCustomIcon])
+        return;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSAlert *alert = [[NSAlert alloc] init];
+        alert.icon = self.customIcon;
+        alert.messageText = @"Would you like use a new icon?";
+        alert.informativeText = @"Gitbox Tweaks has a new icon made to match OS X Yosemite.";
+        [[alert addButtonWithTitle:@"Use Icon"] setTag:NSModalResponseOK];
+        [[alert addButtonWithTitle:@"Cancel"] setTag:NSModalResponseCancel];
+        if ([alert runModal] == NSModalResponseOK) {
+            [self setupCustomIcon];
+        }
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:GBTweaksPromptForCustomIcon];
+    });
+}
+
+- (void)setupCustomIcon;
+{
+    [[NSWorkspace sharedWorkspace] setIcon:self.customIcon forFile:[[NSBundle mainBundle] bundlePath] options:0];
+    [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyAccessory];
+    [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyRegular];
 }
 
 @end
