@@ -193,7 +193,9 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
 
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBMainWindowController *windowController = delegate.windowController;
+        NSRect frame = windowController.window.frame;
         windowController.window.titleVisibility = NSWindowTitleHidden;
+        [windowController.window setFrame:frame display:YES];
     }
 
     NSToolbar *toolbar = delegate.windowController.toolbarController.toolbar;
