@@ -48,6 +48,13 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
     [self GBStageViewController_updateHeader];
 }
 
+- (void)GBStageViewController_updateHeaderSizeAnimating:(BOOL)animating;
+{
+    GBStageViewController *stageViewController = (GBStageViewController *)self;
+    stageViewController.messageTextView.font = [[SIMBLPlugin sharedPlugin] commitMessageFont];
+    [self GBStageViewController_updateHeaderSizeAnimating:animating];
+}
+
 - (void)GBCommitCell_drawSyncStatusIconInRect:(NSRect)rect;
 {
     GBCommitCell *cell = (GBCommitCell *)self;
@@ -175,6 +182,7 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
     SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
     SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
     SWIZZLE(@"GBStageViewController", updateHeader, GBStageViewController_updateHeader);
+    SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
     SWIZZLE(@"GBSidebarCell", drawTextInRect:, GBSidebarCell_drawTextInRect:);
