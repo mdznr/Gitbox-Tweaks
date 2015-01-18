@@ -270,15 +270,15 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
 {
     if ([[NSUserDefaults standardUserDefaults] boolForKey:GBTweaksShouldUseCustomIcon] == NO)
         return;
-    [self setupCustomIcon];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setupCustomIcon];
+    });
 }
 
 - (void)setupCustomIcon;
 {
     [[NSWorkspace sharedWorkspace] setIcon:self.customIcon forFile:[[NSBundle mainBundle] bundlePath] options:0];
     [[NSApplication sharedApplication] setApplicationIconImage:self.customIcon];
-    [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyAccessory];
-    [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyRegular];
 }
 
 @end
