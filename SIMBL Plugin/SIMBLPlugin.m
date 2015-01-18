@@ -202,7 +202,10 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
     if (rint(NSAppKitVersionNumber) > NSAppKitVersionNumber10_9) {
         GBMainWindowController *windowController = delegate.windowController;
         NSRect frame = windowController.window.frame;
+        NSURL *representedURL = windowController.window.representedURL;
+        windowController.window.representedURL = nil;
         windowController.window.titleVisibility = NSWindowTitleHidden;
+        windowController.window.representedURL = representedURL;
         [windowController.window setFrame:frame display:YES];
     }
 
