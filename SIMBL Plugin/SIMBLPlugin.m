@@ -23,7 +23,8 @@
 #import "GBSidebarCell.h"
 #import "YRKSpinningProgressIndicator.h"
 
-NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
+NSString * const GBTweaksDidPromptForCustomIcon = @"GBTweaksDidPromptForCustomIcon";
+NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
 
 @interface SIMBLPlugin ()
 
@@ -228,6 +229,7 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
 
     [self setupGearButton];
     [self setupCustomIconIfNecessary];
+    [self applyCustomIconIfNecessary];
 }
 
 - (void)setupGearButton;
@@ -247,25 +249,34 @@ NSString * const GBTweaksPromptForCustomIcon = @"GBTweaksPromptForCustomIcon";
 
 - (void)setupCustomIconIfNecessary;
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:GBTweaksPromptForCustomIcon])
-        return;
-    dispatch_async(dispatch_get_main_queue(), ^{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:GBTweaksDidPromptForCustomIcon] == NO) dispatch_async(dispatch_get_main_queue(), ^{
         NSAlert *alert = [[NSAlert alloc] init];
         alert.icon = self.customIcon;
         alert.messageText = @"Would you like use a new icon?";
         alert.informativeText = @"Gitbox Tweaks has a new icon made to match OS X Yosemite.";
         [[alert addButtonWithTitle:@"Use Icon"] setTag:NSModalResponseOK];
         [[alert addButtonWithTitle:@"Cancel"] setTag:NSModalResponseCancel];
+        BOOL shouldUseCustomIcon = NO;
         if ([alert runModal] == NSModalResponseOK) {
             [self setupCustomIcon];
+            shouldUseCustomIcon = YES;
         }
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:GBTweaksPromptForCustomIcon];
+        [[NSUserDefaults standardUserDefaults] setBool:shouldUseCustomIcon forKey:GBTweaksShouldUseCustomIcon];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:GBTweaksDidPromptForCustomIcon];
     });
+}
+
+- (void)applyCustomIconIfNecessary;
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:GBTweaksShouldUseCustomIcon] == NO)
+        return;
+    [self setupCustomIcon];
 }
 
 - (void)setupCustomIcon;
 {
     [[NSWorkspace sharedWorkspace] setIcon:self.customIcon forFile:[[NSBundle mainBundle] bundlePath] options:0];
+    [[NSApplication sharedApplication] setApplicationIconImage:self.customIcon];
     [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyAccessory];
     [[NSApplication sharedApplication] setActivationPolicy:NSApplicationActivationPolicyRegular];
 }
