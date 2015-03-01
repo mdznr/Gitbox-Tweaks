@@ -180,10 +180,10 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
 
 - (void)swizzleMethods;
 {
-    SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
-    SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
+    /*SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
     SWIZZLE(@"GBStageViewController", updateHeader, GBStageViewController_updateHeader);
-    SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);
+    SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);*/
+    SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
     SWIZZLE(@"GBSidebarCell", drawTextInRect:, GBSidebarCell_drawTextInRect:);
