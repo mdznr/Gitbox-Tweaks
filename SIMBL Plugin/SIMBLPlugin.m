@@ -8,6 +8,8 @@
 
 #import "SIMBLPlugin.h"
 #import "JRSwizzle.h"
+#import "GBColorLabelPicker.h"
+#import "GBColorLabelPickerButton.h"
 #import "GBCommitViewController.h"
 #import "GBStageViewController.h"
 #import "GBCommitCell.h"
@@ -54,6 +56,17 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
     GBStageViewController *stageViewController = (GBStageViewController *)self;
     stageViewController.messageTextView.font = [[SIMBLPlugin sharedPlugin] commitMessageFont];
     [self GBStageViewController_updateHeaderSizeAnimating:animating];
+}
+
+- (id)GBColorLabelPicker_initWithFrame:(NSRect)frame;
+{
+	frame = NSRectFromCGRect(CGRectMake(frame.origin.x, frame.origin.y, frame.size.width + 28, frame.size.height));
+	return [self GBColorLabelPicker_initWithFrame:frame];
+}
+
+- (NSRect)GBColorLabelPicker_frameForIndex:(int)index;
+{
+	return NSRectFromCGRect(CGRectMake(18 + (24 * index), 0, 22, 22));
 }
 
 - (void)GBCommitCell_drawSyncStatusIconInRect:(NSRect)rect;
@@ -114,9 +127,9 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
 
 - (id)YRKSpinningProgressIndicator_initWithFrame:(NSRect)frame;
 {
-    YRKSpinningProgressIndicator *inddicator = [self YRKSpinningProgressIndicator_initWithFrame:frame];
-    [inddicator setDrawsBackground:YES];
-    return inddicator;
+    YRKSpinningProgressIndicator *indicator = [self YRKSpinningProgressIndicator_initWithFrame:frame];
+    [indicator setDrawsBackground:YES];
+    return indicator;
 }
 
 @end
@@ -159,13 +172,33 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
     self = [super init];
     self.commitMessageFont = [NSFont fontWithName:@"Menlo" size:12];
     self.replacementImages = @{
+		@"GBBadgeTagCenter": [self imageNamed:@"GBBadgeTagCenter"],
+		@"GBBadgeTagLeft": [self imageNamed:@"GBBadgeTagLeft"],
+		@"GBBadgeTagRight": [self imageNamed:@"GBBadgeTagRight"],
+		@"GBColorLabelBlue": [self imageNamed:@"GBColorLabelBlue"],
+		@"GBColorLabelBlueCorner": [self imageNamed:@"GBColorLabelBlueCorner"],
+		@"GBColorLabelClear": [self imageNamed:@"GBColorLabelClear"],
+		@"GBColorLabelGray": [self imageNamed:@"GBColorLabelGray"],
+		@"GBColorLabelGrayCorner": [self imageNamed:@"GBColorLabelGrayCorner"],
+		@"GBColorLabelGreen": [self imageNamed:@"GBColorLabelGreen"],
+		@"GBColorLabelGreenCorner": [self imageNamed:@"GBColorLabelGreenCorner"],
+		@"GBColorLabelHighlight": [self imageNamed:@"GBColorLabelHighlight"],
+		@"GBColorLabelOrange": [self imageNamed:@"GBColorLabelOrange"],
+		@"GBColorLabelOrangeCorner": [self imageNamed:@"GBColorLabelOrangeCorner"],
+		@"GBColorLabelPurple": [self imageNamed:@"GBColorLabelPurple"],
+		@"GBColorLabelPurpleCorner": [self imageNamed:@"GBColorLabelPurpleCorner"],
+		@"GBColorLabelRed": [self imageNamed:@"GBColorLabelRed"],
+		@"GBColorLabelRedCorner": [self imageNamed:@"GBColorLabelRedCorner"],
+		@"GBColorLabelSelection": [self imageNamed:@"GBColorLabelSelection"],
+		@"GBColorLabelYellow": [self imageNamed:@"GBColorLabelYellow"],
+		@"GBColorLabelYellowCorner": [self imageNamed:@"GBColorLabelYellowCorner"],
         @"GBSidebarGroupIcon": [self imageNamed:@"GBSidebarGroupIcon"],
         @"GBSidebarRepositoryIcon": [self imageNamed:@"GBSidebarRepositoryIcon"],
         @"GBSidebarSubmoduleIcon": [self imageNamed:@"GBSidebarSubmoduleIcon"],
         @"GBSidebarSubmoduleMissingIcon": [self imageNamed:@"GBSidebarSubmoduleMissingIcon"],
-        @"GBBadgeTagLeft": [self imageNamed:@"GBBadgeTagLeft"],
-        @"GBBadgeTagCenter": [self imageNamed:@"GBBadgeTagCenter"],
-        @"GBBadgeTagRight": [self imageNamed:@"GBBadgeTagRight"],
+		@"GBToolbarGear": [self imageNamed:@"GBToolbarGear"],
+		@"GBToolbarMinus": [self imageNamed:@"GBToolbarMinus"],
+		@"GBToolbarPlus": [self imageNamed:@"GBToolbarPlus"]
     };
     self.headerRTFTemplate = [NSData dataWithContentsOfURL:[self.bundle URLForResource:@"GBCommitViewControllerHeader" withExtension:@"rtf"]];
     return self;
@@ -183,6 +216,8 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
     /*SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
     SWIZZLE(@"GBStageViewController", updateHeader, GBStageViewController_updateHeader);
     SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);*/
+	SWIZZLE(@"GBColorLabelPicker", initWithFrame:, GBColorLabelPicker_initWithFrame);
+	SWIZZLE(@"GBColorLabelPicker", frameForIndex:, GBColorLabelPicker_frameForIndex:);
     SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
     SWIZZLE(@"GBSidebarCell", image, GBSidebarCell_image);
