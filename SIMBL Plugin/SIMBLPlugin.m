@@ -216,7 +216,7 @@ NSString * const GBTweaksShouldUseCustomIcon = @"GBTweaksShouldUseCustomIcon";
     /*SWIZZLE(@"GBCommitViewController", updateHeaderSize, GBCommitViewController_updateHeaderSize);
     SWIZZLE(@"GBStageViewController", updateHeader, GBStageViewController_updateHeader);
     SWIZZLE(@"GBStageViewController", updateHeaderSizeAnimating:, GBStageViewController_updateHeaderSizeAnimating:);*/
-	SWIZZLE(@"GBColorLabelPicker", initWithFrame:, GBColorLabelPicker_initWithFrame);
+	SWIZZLE(@"GBColorLabelPicker", initWithFrame:, GBColorLabelPicker_initWithFrame:);
 	SWIZZLE(@"GBColorLabelPicker", frameForIndex:, GBColorLabelPicker_frameForIndex:);
     SWIZZLE(@"GBCommitViewController", headerRTFTemplate, GBCommitViewController_headerRTFTemplate);
     SWIZZLE(@"GBCommitCell", drawSyncStatusIconInRect:, GBCommitCell_drawSyncStatusIconInRect:);
